@@ -158,7 +158,7 @@ $db['default'] = array(
  ); */
 $db['default'] = array(
  'dsn'	=> '',
- 'hostname' => 'LAPTOPCIREC1055\SQLEXPRESS',
+ 'hostname' => 'INGADRIANA\SQLEXPRESS',
  'username' => 'sa',
  'port' => 1433, // or the port you configured on step 6
  'password' => 'cirec2020..',
@@ -183,7 +183,7 @@ $db['default'] = array(
 
  $db['esalud'] = array(
  		'dsn'	=> '',
- 		'hostname' => 'LAPTOPCIREC1055\SQLEXPRESS',
+ 		'hostname' => 'INGADRIANA\SQLEXPRESS',
  		'username' => 'sa',
  		'port' => 1433, // or the port you configured on step 6
  		'password' => 'cirec2020..',

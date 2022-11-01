@@ -97,7 +97,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 														<?php
 														$usuario = 'sa';
 														$pass = 'cirec2020..';
-														$servidor = 'LAPTOPCIREC1055\SQLEXPRESS';
+														$servidor = 'INGADRIANA\SQLEXPRESS';
 														$basedatos = 'produccion';
 														$info = array('Database' => $basedatos, 'UID' => $usuario, 'PWD' => $pass);
 														$conn = sqlsrv_connect($servidor, $info);

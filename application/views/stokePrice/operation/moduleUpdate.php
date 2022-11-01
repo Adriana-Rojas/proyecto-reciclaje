@@ -146,7 +146,7 @@ if (isset($_POST['documento'])) {
 	$documento = $_POST['documento'];
 	$usuario = 'sa';
 	$pass = 'cirec2020..';
-	$servidor = 'LAPTOPCIREC1055\SQLEXPRESS';
+	$servidor = 'INGADRIANA\SQLEXPRESS';
 	$basedatos = 'produccion';
 	$info = array('Database' => $basedatos, 'UID' => $usuario, 'PWD' => $pass);
 	$conn = sqlsrv_connect($servidor, $info);
@@ -181,7 +181,7 @@ if (isset($_POST['documento'])) {
 	} else {
 		$usuario = 'sa';
 		$pass = 'cirec2020..';
-		$servidor = 'LAPTOPCIREC1055\SQLEXPRESS';
+		$servidor = 'INGADRIANA\SQLEXPRESS';
 		$basedatos = 'produccion';
 		$infoEsalud = array('Database' => $basedatosEsalud, 'UID' => $usuarioEsalud, 'PWD' => $passEsalud);
 		$conn2 = sqlsrv_connect($servidorEsalud, $infoEsalud);
@@ -516,7 +516,7 @@ if (isset($_POST['Editar'])) {
 
 	$usuario = 'sa';
 	$pass = 'cirec2020..';
-	$servidor = 'LAPTOPCIREC1055\SQLEXPRESS';
+	$servidor = 'INGADRIANA\SQLEXPRESS';
 	$basedatos = 'produccion';
 	$info = array('Database' => $basedatos, 'UID' => $usuario, 'PWD' => $pass);
 	$conn = sqlsrv_connect($servidor, $info);
