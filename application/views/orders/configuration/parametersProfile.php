@@ -96,7 +96,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 														</thead>
 														<?php
 														$usuario = 'sa';
-														$pass = 'cirec2020..';
+														$pass = 'reciclaje2022..';
 														$servidor = 'INGADRIANA\SQLEXPRESS';
 														$basedatos = 'produccion';
 														$info = array('Database' => $basedatos, 'UID' => $usuario, 'PWD' => $pass);

@@ -145,7 +145,7 @@ error_reporting(0);
 if (isset($_POST['documento'])) {
 	$documento = $_POST['documento'];
 	$usuario = 'sa';
-	$pass = 'cirec2020..';
+	$pass = 'reciclaje2022..';
 	$servidor = 'INGADRIANA\SQLEXPRESS';
 	$basedatos = 'produccion';
 	$info = array('Database' => $basedatos, 'UID' => $usuario, 'PWD' => $pass);
@@ -180,7 +180,7 @@ if (isset($_POST['documento'])) {
 	<?php
 	} else {
 		$usuario = 'sa';
-		$pass = 'cirec2020..';
+		$pass = 'reciclaje2022..';
 		$servidor = 'INGADRIANA\SQLEXPRESS';
 		$basedatos = 'produccion';
 		$infoEsalud = array('Database' => $basedatosEsalud, 'UID' => $usuarioEsalud, 'PWD' => $passEsalud);
@@ -515,7 +515,7 @@ if (isset($_POST['Editar'])) {
 	//$proceso = $_POST['proceso'];
 
 	$usuario = 'sa';
-	$pass = 'cirec2020..';
+	$pass = 'reciclaje2022..';
 	$servidor = 'INGADRIANA\SQLEXPRESS';
 	$basedatos = 'produccion';
 	$info = array('Database' => $basedatos, 'UID' => $usuario, 'PWD' => $pass);
