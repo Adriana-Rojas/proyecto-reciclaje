@@ -3,13 +3,13 @@
  *************************************************************************
  *************************************************************************
  Creado por:                 	Juan Carlos Escobar Baquero
- Correo electrónico:          	jcescobarba@gmail.com
- Creación:                    	27/02/2018
- Modificación:                	2019/11/06
- Propósito:						Página Web.
+ Correo electrï¿½nico:          	jcescobarba@gmail.com
+ Creaciï¿½n:                    	27/02/2018
+ Modificaciï¿½n:                	2019/11/06
+ Propï¿½sito:						Pï¿½gina Web.
  *************************************************************************
  *************************************************************************
- ******************** BOGOTÁ COLOMBIA 2018 *******************************
+ ******************** BOGOTï¿½ COLOMBIA 2018 *******************************
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
@@ -41,12 +41,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <!-- Logo icon --><b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="<?= base_url()?>assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                            <img src="<?= base_url()?>assets/images/logo-light-icon.jpg"  alt="homepage"   class="dark-logo" />
                             <!-- Light Logo icon -->
-                            <img src="<?= base_url()?>assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                            <img src="<?= base_url()?>assets/images/logo-light-icon.jpg"  alt="homepage" class="light-logo" />
                         </b>
                         <!--End Logo icon -->
-                        <span class="hidden-xs" style="color: black;"><span class="font-bold">EVOLU</span>TION</span>
+                        <span class="hidden-xs" style="color: black;"><span class="font-bold">RECI</span>CLAJE</span>
                     </a>
                 </div>
                 <!-- ============================================================== -->
