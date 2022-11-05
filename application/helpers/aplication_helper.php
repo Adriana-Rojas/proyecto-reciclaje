@@ -19,7 +19,7 @@ if (!function_exists('showTittleAplication')) {
         /**
          * Pinto el nombre de la aplicaci�n
          */
-        return "EVOLUTION";
+        return "RECICLAJE";
     }
 }
 
@@ -30,7 +30,7 @@ if (!function_exists('showPreloadMessage')) {
         /**
          * Pinto el nombre de la aplicaci�n
          */
-        return "Evolution CICIREC";
+        return "Reciclaje RECICLAJE";
     }
 }
 if (!function_exists('pintaFooter')) {
@@ -44,7 +44,7 @@ if (!function_exists('pintaFooter')) {
         if ($opcion == 'TEMPLATE') {
             return "Template by Metronic " . date('Y');
         } else if ($opcion == 'AUTHOR') {
-            return "Centro Integral de Rehabilitaci&oacute;n de Colombia ";
+            return "Reciclaje";
         } else if ($opcion == 'VERSION') {
             return $page->FunctionsGeneral->getFieldFromTableNotId("ADM_VERSIONAPP", "NOMBRE", "ESTADO", ACTIVO_ESTADO);
         }
@@ -688,7 +688,7 @@ if (!function_exists('paintMessageMail')) {
 		                                </div>
 		                                <div class=\"box-mensaje-body\">
 		                                    " . $messages . "<BR>" . $instrucciones . "
-                                            Est&aacute; es una alerta autom&aacute;tica generada por el sistema de informaci&oacute;n EVOLUTION
+                                            Est&aacute; es una alerta autom&aacute;tica generada por el sistema de informaci&oacute;n RECICLAJE
 		                                </div>
 		                            </div>
 		                            <br><br><br><br>
@@ -1064,9 +1064,9 @@ if (!function_exists('formatBytes')) {
     }
 }
 
-if (!function_exists('numberFormatEvolution')) {
+if (!function_exists('numberFormatReciclaje')) {
 
-    function numberFormatEvolution($numero)
+    function numberFormatReciclaje($numero)
     {
 
         /**

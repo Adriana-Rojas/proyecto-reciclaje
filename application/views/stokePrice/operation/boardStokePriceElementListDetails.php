@@ -140,9 +140,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
     								<tr>
 									<td class="text-right"><?= $value->CODIGO;?></td>
 									<td class="text-right"><?= $value->NOMBRE;?></td>
-									<td class="text-right"><?= numberFormatEvolution($value->CANTIDAD);?></td>
-									<td class="text-right"><?= numberFormatEvolution($temporal);?></td>
-									<td class="text-right"><?= numberFormatEvolution($producto);?></td>
+									<td class="text-right"><?= numberFormatReciclaje($value->CANTIDAD);?></td>
+									<td class="text-right"><?= numberFormatReciclaje($temporal);?></td>
+									<td class="text-right"><?= numberFormatReciclaje($producto);?></td>
 									<td >
 										<div class="btn-group">
 	                                        <button type="button" class="btn btn-info btn-rounded dropdown-toggle" data-toggle="dropdown" 
@@ -192,7 +192,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						<div class="pull-right m-t-30 text-right">
 							
 							<h3>
-								<b class="text-danger">Costo neto despiece: $ <?= numberFormatEvolution($valor);?></b>
+								<b class="text-danger">Costo neto despiece: $ <?= numberFormatReciclaje($valor);?></b>
 							</h3>
 						</div>
 						<div class="clearfix"></div>

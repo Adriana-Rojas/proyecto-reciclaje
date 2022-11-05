@@ -107,10 +107,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="col-md-12">
 						<div class="pull-right m-t-30 text-right">
 							<h3>
-								<b>Valor de la TRM:</b> $ <?= numberFormatEvolution($trm);?>
+								<b>Valor de la TRM:</b> $ <?= numberFormatReciclaje($trm);?>
         					</h3>
 							<h3>
-								<b class="text-danger">Costo Neto despiece: $ <?= numberFormatEvolution($costoDespiece);?></b>
+								<b class="text-danger">Costo Neto despiece: $ <?= numberFormatReciclaje($costoDespiece);?></b>
 							</h3>
 						</div>
 						<div class="clearfix"></div>

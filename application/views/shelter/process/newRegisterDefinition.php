@@ -3,13 +3,13 @@
  *************************************************************************
  *************************************************************************
  Creado por:                 	Juan Carlos Escobar Baquero
- Correo electrónico:          	jcescobarba@gmail.com
- Creación:                    	27/02/2018
- Modificación:                	2019/11/06
- Propósito:						Página Web.
+ Correo electrï¿½nico:          	jcescobarba@gmail.com
+ Creaciï¿½n:                    	27/02/2018
+ Modificaciï¿½n:                	2019/11/06
+ Propï¿½sito:						Pï¿½gina Web.
  *************************************************************************
  *************************************************************************
- ******************** BOGOTÁ COLOMBIA 2018 *******************************
+ ******************** BOGOTï¿½ COLOMBIA 2018 *******************************
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -204,7 +204,7 @@ $fecha=$ano_manana."/".$mes_manana."/".$dia_manana;
 	                </div>
 	               
 	                
-	                <!-- Botón de envio de formulario -->
+	                <!-- Botï¿½n de envio de formulario -->
 	                <div class="row">
 	                	<div class="col-sm-12">
 	                	<a href="<?= base_url()?>ShelterAppShelter/board" class="btn  btn-primary btn-rounded pull-left waves-effect waves-light m-r-10"> 
@@ -218,7 +218,7 @@ $fecha=$ano_manana."/".$mes_manana."/".$dia_manana;
 	                	<br>
 	                	</div> 
 	                </div>
-	                <!-- FIN Botón de envio de formulario -->
+	                <!-- FIN Botï¿½n de envio de formulario -->
 	            </form>
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
@@ -244,7 +244,7 @@ $fecha=$ano_manana."/".$mes_manana."/".$dia_manana;
 				        minDate: '<?=$fecha;?>',
 				        buttonClasses: ['btn', 'btn-sm'],
 				        locale: {
-				        	"format": "<?= strtoupper( DATE_FORMAT_EVOLUTION);?>",
+				        	"format": "<?= strtoupper( DATE_FORMAT_RECICLAJE);?>",
 				            "separator": " - ",
 				            "applyLabel": "Aplicar",
 				            "cancelLabel": "Cancelar",
@@ -285,7 +285,7 @@ $fecha=$ano_manana."/".$mes_manana."/".$dia_manana;
         		   jQuery('#nacimiento').datepicker({
         		        autoclose: true,
         		        todayHighlight: true,
-        		        format: '<?= DATE_FORMAT_EVOLUTION;?>',
+        		        format: '<?= DATE_FORMAT_RECICLAJE;?>',
         		        endDate: '0d',
         		        language: 'es'
         		    });
@@ -305,7 +305,7 @@ $fecha=$ano_manana."/".$mes_manana."/".$dia_manana;
 						})
 					});
 		        
-				/*Traigo la información de las habitaciones que cumplen con el criterio */
+				/*Traigo la informaciï¿½n de las habitaciones que cumplen con el criterio */
 			     $(document).ready(function() {
 						$("#periodo").change(function() {
 							periodo = $('#periodo').val();

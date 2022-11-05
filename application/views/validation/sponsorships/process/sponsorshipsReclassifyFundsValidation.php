@@ -3,13 +3,13 @@
  *************************************************************************
  *************************************************************************
  Creado por:                 	Juan Carlos Escobar Baquero
- Correo electrónico:          	jcescobarba@gmail.com
- Creación:                    	27/02/2018
- Modificación:                	2019/11/06
- Propósito:						Validación del formulario para la página newCustomer
+ Correo electrï¿½nico:          	jcescobarba@gmail.com
+ Creaciï¿½n:                    	27/02/2018
+ Modificaciï¿½n:                	2019/11/06
+ Propï¿½sito:						Validaciï¿½n del formulario para la pï¿½gina newCustomer
  *************************************************************************
  *************************************************************************
- ******************** BOGOTÁ COLOMBIA 2017 *******************************
+ ******************** BOGOTï¿½ COLOMBIA 2017 *******************************
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
@@ -41,7 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     messages: {
                     	valor:{
                     		required:"Digite el valor por el cual desea afectar el fondo",
-                    		max:"El valor por el cual desea afectar el fondo no debe superar <?= numberFormatEvolution( $valor);?>"
+                    		max:"El valor por el cual desea afectar el fondo no debe superar <?= numberFormatReciclaje( $valor);?>"
                         },	
                     	accion:"Seleccion el acci<?=  LETRA_MIN_O;?>n que desea aplicar",
                     	destino:"Seleccion el fondo destino que desea afectar"

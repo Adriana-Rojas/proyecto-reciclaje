@@ -80,7 +80,7 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 		jQuery('.datepicker').datepicker({
 			autoclose: true,
 			todayHighlight: true,
-			format: '<?= DATE_FORMAT_EVOLUTION; ?>',
+			format: '<?= DATE_FORMAT_RECICLAJE; ?>',
 			language: 'es'
 		});
 	});
@@ -1811,7 +1811,7 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 																<td><?= $value->FECHA ?></td>
 																<td align="right"><?php
 																					if ($value->TIPODOC != '') {
-																						echo "$ " . numberFormatEvolution($value->TOTAL - ($value->TOTAL * ($value->DESCUENTO / 100)));
+																						echo "$ " . numberFormatReciclaje($value->TOTAL - ($value->TOTAL * ($value->DESCUENTO / 100)));
 																					} else {
 																						echo "----";
 																					}

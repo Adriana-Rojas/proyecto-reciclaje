@@ -68,7 +68,7 @@ $validador=companyListValidation($this, $empresaId);
 							<i class="fa fa-calendar"></i> Fecha:  <?= date("Y/m/d H:i", strtotime($fecha));?><br>
 							<i class="fa fa-clock-o "></i> Vigencia: <?= $vigencia;?><br>
 							<i class="fa fa-usd"></i> Forma de pago:  <?= $pago;?><br>
-							<!-- <i class="fa fa-money"></i> TRM:  <?= numberFormatEvolution($trm);?><br> -->
+							<!-- <i class="fa fa-money"></i> TRM:  <?= numberFormatReciclaje($trm);?><br> -->
 							
 						</address>
 					</div>
@@ -144,10 +144,10 @@ $validador=companyListValidation($this, $empresaId);
 									 </td>
 									<td class="text-right"><?= $printCode[2];?></td>
 									<td class="text-right"><?= $value->TIPO;?></td>
-									<td class="text-right"><?= numberFormatEvolution($value->CANTIDAD);?></td>
-									<td class="text-right"><?= numberFormatEvolution($valUnitario);?></td>
-									<td class="text-right"><?= numberFormatEvolution($totalIva);?></td>
-									<td class="text-right"><?= numberFormatEvolution($valorTotal);?></td>
+									<td class="text-right"><?= numberFormatReciclaje($value->CANTIDAD);?></td>
+									<td class="text-right"><?= numberFormatReciclaje($valUnitario);?></td>
+									<td class="text-right"><?= numberFormatReciclaje($totalIva);?></td>
+									<td class="text-right"><?= numberFormatReciclaje($valorTotal);?></td>
 									
 								</tr>
 								<?php 
@@ -164,19 +164,19 @@ $validador=companyListValidation($this, $empresaId);
 				<div class="col-md-12">
 					<div class="pull-right m-t-30 text-right">
 						<h3>
-							<b>Sub total cotizaci&oacute;n :</b> $ <?= numberFormatEvolution($subtotalNeto);?>
+							<b>Sub total cotizaci&oacute;n :</b> $ <?= numberFormatReciclaje($subtotalNeto);?>
 						</h3>
 						
 						<h3>
-							<b>(-) Descuento:</b> $ <?= numberFormatEvolution($subtotalDescuento);?>
+							<b>(-) Descuento:</b> $ <?= numberFormatReciclaje($subtotalDescuento);?>
 						</h3>
 
 						<h3>
-							<b>(+) IVA:</b> $ <?= numberFormatEvolution($subtotalIva);?>
+							<b>(+) IVA:</b> $ <?= numberFormatReciclaje($subtotalIva);?>
 						</h3>
 
 						<h3>
-							<b class="text-danger">Total cotizaci&oacute;n <sup>(1)</sup>: $ <?= numberFormatEvolution($valor);?></b>
+							<b class="text-danger">Total cotizaci&oacute;n <sup>(1)</sup>: $ <?= numberFormatReciclaje($valor);?></b>
 						</h3>
 					</div>
 					<div class="clearfix"></div>
@@ -187,7 +187,7 @@ $validador=companyListValidation($this, $empresaId);
 				<div class="col-md-12">
 					<div class="pull-right m-t-30 text-right">
 						<h3>
-							<b class="text-danger">Total cotizaci&oacute;n <sup>(1)</sup>: $ <?= numberFormatEvolution($valor );?></b>
+							<b class="text-danger">Total cotizaci&oacute;n <sup>(1)</sup>: $ <?= numberFormatReciclaje($valor );?></b>
 						</h3>
 	
 					</div>
@@ -215,7 +215,7 @@ $validador=companyListValidation($this, $empresaId);
 						<table class="table table-hover" >
 							<thead>
 								<tr>
-									<th class="text-right">C&oacute;digo CIREC</th>
+									<th class="text-right">C&oacute;digo RECICLAJE</th>
 									<!-- <th class="text-right" >Nombre</th>-->
 									<th class="text-right" >Descripci&oacute;n</th>
 									<th class="text-right" >Tiempo de entrega</th>
@@ -260,7 +260,7 @@ $validador=companyListValidation($this, $empresaId);
 				<div class="col-md-12">
 					<h5><b class="font-bold">Observaciones</b></h5>
 					<h6><em> <?= $observacion;?></em></h6>
-					<h5><b class="font-bold" style="color: red;">Modelo de Rehabilitaci&oacute;n CIREC de la "A a la Z"    </b> </h5>
+					<h5><b class="font-bold" style="color: red;">Modelo de Rehabilitaci&oacute;n RECICLAJE de la "A a la Z"    </b> </h5>
 					<h6><em> <?= $incluye;?></em></h6>
 					<h5><b class="font-bold">Concepto costos adicionales</b></h5>
 					<h6><em> <?= $conceptoCosAd;?></em></h6>

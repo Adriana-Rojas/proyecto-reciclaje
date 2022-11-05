@@ -3,13 +3,13 @@
  *************************************************************************
  *************************************************************************
  Creado por:                 	Juan Carlos Escobar Baquero
- Correo electrónico:          	jcescobarba@gmail.com
- Creación:                    	27/02/2018
- Modificación:                	2019/11/06
- Propósito:						Página Web.
+ Correo electrï¿½nico:          	jcescobarba@gmail.com
+ Creaciï¿½n:                    	27/02/2018
+ Modificaciï¿½n:                	2019/11/06
+ Propï¿½sito:						Pï¿½gina Web.
  *************************************************************************
  *************************************************************************
- ******************** BOGOTÁ COLOMBIA 2018 *******************************
+ ******************** BOGOTï¿½ COLOMBIA 2018 *******************************
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -67,7 +67,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<label class="col-md-12" for="degreso">Fecha nueva de egreso * </label>
 										<div class="col-md-12">
 											<input type="text" class="form-control" name="degreso"
-												id="degreso" placeholder="<?= DATE_FORMAT_EVOLUTION;?>">
+												id="degreso" placeholder="<?= DATE_FORMAT_RECICLAJE;?>">
 										</div>
 									</div>
 									<div class="form-group">
@@ -84,7 +84,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div>
 				
 				
-					<!-- Botón de envio de formulario -->
+					<!-- Botï¿½n de envio de formulario -->
 	                <div class="row">
 	                	<div class="col-sm-12">
 	                	<a href="<?= base_url()?>ShelterAppShelter/board" class="btn  btn-primary btn-rounded pull-left waves-effect waves-light m-r-10"> 
@@ -100,7 +100,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	                	<br>
 	                	</div> 
 	                </div>
-	                <!-- FIN Botón de envio de formulario -->
+	                <!-- FIN Botï¿½n de envio de formulario -->
 	            </form>
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
@@ -139,7 +139,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         			   	startDate: '<?= defineFormatoFechaInverso($fechaFin,FORMAT_DATE);?>',
         			    autoclose: true,
         		        todayHighlight: true,
-        		        format: '<?= DATE_FORMAT_EVOLUTION;?>',
+        		        format: '<?= DATE_FORMAT_RECICLAJE;?>',
         		        
         		        language: 'es'
         		    });

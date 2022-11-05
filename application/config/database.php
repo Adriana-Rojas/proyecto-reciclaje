@@ -86,7 +86,7 @@ $query_builder = TRUE;
 /*
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'CIRECSQL',
+	'hostname' => 'RECICLAJESQL',
 	'username' => '',
 	'password' => '',
 	'database' => '',
@@ -113,7 +113,7 @@ $db['default'] = array(
 
 $db['default'] = array(
  'dsn'	=> '',
- 'hostname' => 'DESKTOP_CIREC3\SQLEXPRESS',
+ 'hostname' => 'DESKTOP_RECICLAJE3\SQLEXPRESS',
  'username' => 'sa',
  'port' => 1433, // or the port you configured on step 6
  'password' => 'cirec2019..',

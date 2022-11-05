@@ -557,7 +557,7 @@ if ($listaDetalle!=null){
 															
 															</td>
                                                             <td>
-                                                            	<input type="text" id="unitarioText<?= $i ?>" name="unitarioText<?= $i ?>"  class=" form-control col-md-12 " readonly="readonly" value="<?= numberFormatEvolution($valorElemento)?>"/>
+                                                            	<input type="text" id="unitarioText<?= $i ?>" name="unitarioText<?= $i ?>"  class=" form-control col-md-12 " readonly="readonly" value="<?= numberFormatReciclaje($valorElemento)?>"/>
                                                             	
                                                             	<input type="hidden" name="unitario<?= $i ?>" id="unitario<?= $i ?>" value="<?= $valorElemento; ?>">
                                                             	
@@ -568,7 +568,7 @@ if ($listaDetalle!=null){
                                                             	<input type="hidden" name="adicionales<?= $i ?>" id="adicionales<?= $i ?>" value="<?= $asociados; ?>">
                                                             </td>
                                                             <td>
-                                                            	<input type="text" id="totalText<?= $i ?>" name="totalText<?= $i ?>" class="form-control col-md-12 "  readonly="readonly" value="<?= numberFormatEvolution($totalElemento);?>"/>
+                                                            	<input type="text" id="totalText<?= $i ?>" name="totalText<?= $i ?>" class="form-control col-md-12 "  readonly="readonly" value="<?= numberFormatReciclaje($totalElemento);?>"/>
 
                                                             	<input type="hidden" name="total<?= $i ?>" id="total<?= $i ?>" value="<?= $totalElemento; ?>">
                                                             </td>
@@ -801,7 +801,7 @@ if ($listaDetalle!=null){
 						<label class="col-md-12" for="total">Total cotizaci&oacute;n antes de descuento* </label>
 						<div class="col-md-12">
 							<input class="form-control " type="text" name="totalText" data-mask="$ 999,999,999.99"
-								id="totalText" readonly="readonly" value="<?= numberFormatEvolution($totalCotizacion); ?>" />
+								id="totalText" readonly="readonly" value="<?= numberFormatReciclaje($totalCotizacion); ?>" />
 
 								<input class="form-control " type="hidden" name="total" 
 								id="total" readonly="readonly" value="<?= $totalCotizacion; ?>" />
@@ -853,7 +853,7 @@ if ($listaDetalle!=null){
 								id="totalFinal" readonly="readonly" value="<?= $totalFinalCotizacion; ?>" />
 
 								<input class="form-control " type="text" name="totalFinalText"
-								id="totalFinalText" readonly="readonly" value="<?= numberFormatEvolution($totalFinalCotizacion); ?>" />
+								id="totalFinalText" readonly="readonly" value="<?= numberFormatReciclaje($totalFinalCotizacion); ?>" />
 						</div>
 					</div>
 					-->

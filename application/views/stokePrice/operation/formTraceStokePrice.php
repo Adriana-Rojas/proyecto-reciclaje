@@ -178,13 +178,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 											<td class="text-right"><?= $value->CODIGO; ?></td>
 											<td class="text-right"><?= $value->NOMBRE; ?></td>
 											<td class="text-right"><?= $value->TIPO; ?></td>
-											<td class="text-right"><?= numberFormatEvolution($value->CANTIDAD); ?></td>
-											<td class="text-right"><?= numberFormatEvolution($value->MARGEN); ?></td>
-											<td class="text-right"><?= numberFormatEvolution($value->MATERIALES); ?></td>
-											<td class="text-right"><?= numberFormatEvolution($value->MANOOBRA); ?></td>
-											<td class="text-right"><?= numberFormatEvolution($value->ASOCIADOS); ?></td>
-											<td class="text-right"><?= numberFormatEvolution($value->VALOR); ?></td>
-											<td class="text-right"><?= numberFormatEvolution($value->CANTIDAD * $value->VALOR); ?></td>
+											<td class="text-right"><?= numberFormatReciclaje($value->CANTIDAD); ?></td>
+											<td class="text-right"><?= numberFormatReciclaje($value->MARGEN); ?></td>
+											<td class="text-right"><?= numberFormatReciclaje($value->MATERIALES); ?></td>
+											<td class="text-right"><?= numberFormatReciclaje($value->MANOOBRA); ?></td>
+											<td class="text-right"><?= numberFormatReciclaje($value->ASOCIADOS); ?></td>
+											<td class="text-right"><?= numberFormatReciclaje($value->VALOR); ?></td>
+											<td class="text-right"><?= numberFormatReciclaje($value->CANTIDAD * $value->VALOR); ?></td>
 											<td class="text-right">
 												<a href="<?= base_url() . 'StokePriceAppStokePrice/detailsDespiece/' . $this->encryption->encrypt($value->ID_ELEMENTO_COTIZACION) . '/' . $idCotizacion ?>" class="btn btn-info btn-rounded" data-toggle="dropdown aria-haspopup=" true" aria-expanded="false">
 													<i class="fa fa-search"></i>
@@ -206,17 +206,17 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="col-md-12">
 						<div class="pull-right m-t-30 text-right">
 							<h3>
-								<b>Sub total cotizaci&oacute;n :</b> $ <?= numberFormatEvolution($subtotalNeto); ?>
+								<b>Sub total cotizaci&oacute;n :</b> $ <?= numberFormatReciclaje($subtotalNeto); ?>
 							</h3>
 							<h3>
-								<b> (-) Descuento:</b> $ <?= numberFormatEvolution($subtotalDescuento); ?>
+								<b> (-) Descuento:</b> $ <?= numberFormatReciclaje($subtotalDescuento); ?>
 							</h3>
 							<h3>
 								<h3>
-									<b> (+) IVA:</b> $ <?= numberFormatEvolution($subtotalIva); ?>
+									<b> (+) IVA:</b> $ <?= numberFormatReciclaje($subtotalIva); ?>
 								</h3>
 								<h3>
-									<b class="text-danger">Total cotizaci&oacute;n: $ <?= numberFormatEvolution($valor); ?></b>
+									<b class="text-danger">Total cotizaci&oacute;n: $ <?= numberFormatReciclaje($valor); ?></b>
 								</h3>
 						</div>
 						<div class="clearfix"></div>

@@ -3,13 +3,13 @@
  *************************************************************************
  *************************************************************************
  Creado por:                 	Juan Carlos Escobar Baquero
- Correo electrónico:          	jcescobarba@gmail.com
- Creación:                    	27/02/2018
- Modificación:                	2019/11/06
- Propósito:						Página Web.
+ Correo electrï¿½nico:          	jcescobarba@gmail.com
+ Creaciï¿½n:                    	27/02/2018
+ Modificaciï¿½n:                	2019/11/06
+ Propï¿½sito:						Pï¿½gina Web.
  *************************************************************************
  *************************************************************************
- ******************** BOGOTÁ COLOMBIA 2018 *******************************
+ ******************** BOGOTï¿½ COLOMBIA 2018 *******************************
  */
 defined('BASEPATH') or exit('No direct script access allowed');
 
@@ -117,7 +117,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 								?>
 								<tr>
 									<td><?= $value->NOMBRE;?></td>
-									<td class="text-right"><?= numberFormatEvolution($value->PORCENTAJE);?></td>
+									<td class="text-right"><?= numberFormatReciclaje($value->PORCENTAJE);?></td>
 								</tr>
 								<?php 
 								    }
@@ -131,11 +131,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			<div class="row">
 				<div class="col-md-12">
 					<div class="pull-right m-t-30 text-right">
-						<p>Total cotizado: $ <?= numberFormatEvolution($valor);?></p>
-						<p>Total patrocinado : $ <?= numberFormatEvolution($patrocinado);?></p>
+						<p>Total cotizado: $ <?= numberFormatReciclaje($valor);?></p>
+						<p>Total patrocinado : $ <?= numberFormatReciclaje($patrocinado);?></p>
 						<hr>
 						<h3>
-							<b>Total a pagar:</b> $ <?= numberFormatEvolution($valor- $patrocinado);?>
+							<b>Total a pagar:</b> $ <?= numberFormatReciclaje($valor- $patrocinado);?>
 						</h3>
 					</div>
 					<div class="clearfix"></div>

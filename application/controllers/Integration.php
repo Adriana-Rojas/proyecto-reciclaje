@@ -1495,7 +1495,7 @@ class Integration extends CI_Controller
 						$manoObra . "|" .
 						$asociados . "|" .
 						$valida . "|" .
-						numberFormatEvolution($unitario) . "|" .
+						numberFormatReciclaje($unitario) . "|" .
 						$iva . "|" .
 						$idIva . "|" .
 						$idGruElem;
@@ -1688,16 +1688,16 @@ class Integration extends CI_Controller
 					}
 					/*
     	            //Retorno valores
-    	            echo $nombre . "|" . $tipo. "|" . $unitario . "|" . $margen. "|" . $materiales. "|" . $manoObra. "|" . $asociados. "|" . $valida. "|" . numberFormatEvolution($unitario);*/
+    	            echo $nombre . "|" . $tipo. "|" . $unitario . "|" . $margen. "|" . $materiales. "|" . $manoObra. "|" . $asociados. "|" . $valida. "|" . numberFormatReciclaje($unitario);*/
 
 					/*
 			        $temporalValor=defineValueFormule($margen,$materiales,$manoobra,$adicionales);
 			        $total=$temporalValor*$cantidad;
-			        echo $temporalValor."|".numberFormatEvolution($temporalValor)."|".$total."|".numberFormatEvolution($total);
+			        echo $temporalValor."|".numberFormatReciclaje($temporalValor)."|".$total."|".numberFormatReciclaje($total);
 					*/
 
 					$total = $unitario * $cantidad;
-					echo $unitario . "|" . numberFormatEvolution($unitario) . "|" . $total . "|" . numberFormatEvolution($total);
+					echo $unitario . "|" . numberFormatReciclaje($unitario) . "|" . $total . "|" . numberFormatReciclaje($total);
 				} else {
 					echo '';
 				}
@@ -1726,7 +1726,7 @@ class Integration extends CI_Controller
 		if ($this->FunctionsAdmin->validateSession($this->encryption->encrypt(CTE_SAVE_INFORMATION_PROGRAM))) {
 
 
-			echo numberFormatEvolution($total) . "|" . numberFormatEvolution($totalFinal);
+			echo numberFormatReciclaje($total) . "|" . numberFormatReciclaje($totalFinal);
 		} else {
 			// Retorno a la p�gina principal
 

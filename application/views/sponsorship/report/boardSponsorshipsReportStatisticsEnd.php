@@ -3,13 +3,13 @@
  *************************************************************************
  *************************************************************************
  Creado por:                 	Juan Carlos Escobar Baquero
- Correo electrónico:          	jcescobarba@gmail.com
- Creación:                    	27/02/2018
- Modificación:                	2019/11/06
- Propósito:						Página Web.
+ Correo electrï¿½nico:          	jcescobarba@gmail.com
+ Creaciï¿½n:                    	27/02/2018
+ Modificaciï¿½n:                	2019/11/06
+ Propï¿½sito:						Pï¿½gina Web.
  *************************************************************************
  *************************************************************************
- ******************** BOGOTÁ COLOMBIA 2018 *******************************
+ ******************** BOGOTï¿½ COLOMBIA 2018 *******************************
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
@@ -61,7 +61,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             									    $inicial=$inicial+$temporal;
             									    
             									}$inicial=$inicial+$temporal;
-            									echo numberFormatEvolution($temporal);
+            									echo numberFormatReciclaje($temporal);
             									?></td>
             									
             									<td class="text-right" >
@@ -78,14 +78,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             									    $autorizado=$autorizado+$temporal;
             									    
             									}
-            									echo numberFormatEvolution($temporal);?>
+            									echo numberFormatReciclaje($temporal);?>
             									</td>
             									
             									
             									<td class="text-right" >
             									<?php
             									$actual=$actual+$value->VALOR;
-            									echo numberFormatEvolution($value->VALOR);?>
+            									echo numberFormatReciclaje($value->VALOR);?>
             									</td>
             								</tr>	
             									
@@ -98,9 +98,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             							<tfoot>
             								<tr style="background-color: silver;">
             									<th>Totales</th>
-            									<th class="text-right" ><?= numberFormatEvolution($inicial);?></th>
-            									<th class="text-right" ><?= numberFormatEvolution($autorizado);?></th>
-            									<th class="text-right" ><?= numberFormatEvolution($actual);?></th>
+            									<th class="text-right" ><?= numberFormatReciclaje($inicial);?></th>
+            									<th class="text-right" ><?= numberFormatReciclaje($autorizado);?></th>
+            									<th class="text-right" ><?= numberFormatReciclaje($actual);?></th>
             								</tr>
             							</tfoot>
                                     </table>

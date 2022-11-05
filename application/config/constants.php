@@ -234,7 +234,7 @@ defined('CTE_JOCKER_ORDER')      OR define('CTE_JOCKER_ORDER', '#ORDEN#'); //
 defined('CTE_JOCKER_STATE')      OR define('CTE_JOCKER_STATE', '#ESTADO#'); //
 defined('CTE_JOCKER_PATIENT')      OR define('CTE_JOCKER_PATIENT', '#PACIENTE#'); //
 
-defined('DATE_FORMAT_EVOLUTION')      OR define('DATE_FORMAT_EVOLUTION', 'yyyy/mm/dd'); //
+defined('DATE_FORMAT_RECICLAJE')      OR define('DATE_FORMAT_RECICLAJE', 'yyyy/mm/dd'); //
 //Grupos
 defined('GRUPO_NO_REQUERIDO')      OR define('GRUPO_NO_REQUERIDO', '28'); //
 defined('GRUPO_ASOCIADO')      OR define('GRUPO_ASOCIADO', '27'); //

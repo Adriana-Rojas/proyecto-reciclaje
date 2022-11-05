@@ -277,7 +277,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                         <!--
                                                 <td align="right"><?php
                                                                     if ($value->TIPODOC != '') {
-                                                                        echo "$ " . numberFormatEvolution($value->TOTAL - ($value->TOTAL * ($value->DESCUENTO / 100)));
+                                                                        echo "$ " . numberFormatReciclaje($value->TOTAL - ($value->TOTAL * ($value->DESCUENTO / 100)));
                                                                     } else {
                                                                         echo "----";
                                                                     }

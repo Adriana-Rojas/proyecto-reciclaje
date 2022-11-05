@@ -3,13 +3,13 @@
  *************************************************************************
  *************************************************************************
  Creado por:                 	Juan Carlos Escobar Baquero
- Correo electrónico:          	jcescobarba@gmail.com
- Creación:                    	27/02/2018
- Modificación:                	2019/11/06
- Propósito:						Cabecerá de la página de logueo del sistema de información SaludColombia.
+ Correo electrï¿½nico:          	jcescobarba@gmail.com
+ Creaciï¿½n:                    	27/02/2018
+ Modificaciï¿½n:                	2019/11/06
+ Propï¿½sito:						Cabecerï¿½ de la pï¿½gina de logueo del sistema de informaciï¿½n SaludColombia.
  *************************************************************************
  *************************************************************************
- ******************** BOGOTÁ COLOMBIA 2017 *******************************
+ ******************** BOGOTï¿½ COLOMBIA 2017 *******************************
  */
 defined('BASEPATH') or exit('No direct script access allowed');
 
@@ -18,7 +18,7 @@ $messages='';
 if($preguntas!=null){
     $i=0;
     foreach ($preguntas as $pregunta){
-        //Defino lo obligatorio para los artículos
+        //Defino lo obligatorio para los artï¿½culos
         $i=$pregunta->ID;
         $rules.="pregunta$i: {
 				required: true
@@ -334,7 +334,7 @@ if ($validador) {
 				<div class="col-md-4">
 
 					<address>
-						<strong>Centro Integral de Rehabilitaci&oacute;n de Colombia.</strong>
+						<strong>RECICLAJE.</strong>
 						<br />Carrera 54 # 65 - 25 (Bogot&aacute; - Colombia) <br /> PBX
 						Bogot&aacute;: 795 3600 <br /> <abbr title="Phone">L&iacute;nea
 							Nacional: </abbr> 01 8000 423 633

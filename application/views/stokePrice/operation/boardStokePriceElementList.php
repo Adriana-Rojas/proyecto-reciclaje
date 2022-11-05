@@ -208,14 +208,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 										<td class="text-right"><?= $value->CODIGO;?></td>
 										<td class="text-right"><?= $value->NOMBRE;?></td>
 										<!--<td class="text-right"><?= $value->TIPO;?></td> -->
-										<td class="text-right"><?= numberFormatEvolution($value->CANTIDAD);?></td>
-										<td class="text-right"><?= numberFormatEvolution($valUnitario);?></td>
-										<td class="text-right"><?= numberFormatEvolution($valDescuento);?></td>
+										<td class="text-right"><?= numberFormatReciclaje($value->CANTIDAD);?></td>
+										<td class="text-right"><?= numberFormatReciclaje($valUnitario);?></td>
+										<td class="text-right"><?= numberFormatReciclaje($valDescuento);?></td>
 										
-										<td class="text-right"><?= numberFormatEvolution($iva*100) ;?> %	</td>
-										<td class="text-right"><?= numberFormatEvolution($totalIva);?></td>
-										<td class="text-right"><?= numberFormatEvolution($unitarioTotal);?></td>
-										<td class="text-right"><?= numberFormatEvolution($valorTotal);?></td>
+										<td class="text-right"><?= numberFormatReciclaje($iva*100) ;?> %	</td>
+										<td class="text-right"><?= numberFormatReciclaje($totalIva);?></td>
+										<td class="text-right"><?= numberFormatReciclaje($unitarioTotal);?></td>
+										<td class="text-right"><?= numberFormatReciclaje($valorTotal);?></td>
 
 										
 									</tr>
@@ -234,17 +234,17 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						<div class="col-md-12">
 							<div class="pull-right m-t-30 text-right">
 								<h3>
-									<b>Sub total cotizaci&oacute;n:</b> $ <?= numberFormatEvolution($subtotalNeto);?>
+									<b>Sub total cotizaci&oacute;n:</b> $ <?= numberFormatReciclaje($subtotalNeto);?>
 									</h3>
 								<h3>
-									<b> (-) Descuento:</b> $ <?= numberFormatEvolution($subtotalDescuento);?>
+									<b> (-) Descuento:</b> $ <?= numberFormatReciclaje($subtotalDescuento);?>
 									</h3>
 								<h3>
 									<h3>
-									<b> (+) IVA:</b> $ <?= numberFormatEvolution($subtotalIva);?>
+									<b> (+) IVA:</b> $ <?= numberFormatReciclaje($subtotalIva);?>
 									</h3>
 								<h3>
-									<b class="text-danger">Total cotizaci&oacute;n: $ <?= numberFormatEvolution($valor);?></b>
+									<b class="text-danger">Total cotizaci&oacute;n: $ <?= numberFormatReciclaje($valor);?></b>
 								</h3>
 							</div>
 							<div class="clearfix"></div>

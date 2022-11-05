@@ -32,7 +32,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		jQuery('.datepicker').datepicker({
 			autoclose: true,
 			todayHighlight: true,
-			format: '<?= DATE_FORMAT_EVOLUTION; ?>',
+			format: '<?= DATE_FORMAT_RECICLAJE; ?>',
 			language: 'es'
 		});
 	});

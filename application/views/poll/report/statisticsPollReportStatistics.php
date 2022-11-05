@@ -3,13 +3,13 @@
  *************************************************************************
  *************************************************************************
  Creado por:                 	Juan Carlos Escobar Baquero
- Correo electrónico:          	jcescobarba@gmail.com
- Creación:                    	27/02/2018
- Modificación:                	2019/11/06
- Propósito:						Página Web.
+ Correo electrï¿½nico:          	jcescobarba@gmail.com
+ Creaciï¿½n:                    	27/02/2018
+ Modificaciï¿½n:                	2019/11/06
+ Propï¿½sito:						Pï¿½gina Web.
  *************************************************************************
  *************************************************************************
- ******************** BOGOTÁ COLOMBIA 2018 *******************************
+ ******************** BOGOTï¿½ COLOMBIA 2018 *******************************
  */
 defined('BASEPATH') or exit('No direct script access allowed');
 
@@ -19,7 +19,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <!-- ============================================================== -->
 <!-- JavaScript para pintar campos adicionales -->
 <!-- ============================================================== -->
-<!-- Librerias para gráficos -->
+<!-- Librerias para grï¿½ficos -->
 <link rel="stylesheet"
 	href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
@@ -121,7 +121,7 @@ if ($informe == 1) {
 								<tr>
 									<td ><?= $v->NOMBRE;?></td>
 									<td ><?=$cantidad; ?></td>
-									<td ><?= numberFormatEvolution( round($general,2)*100); ?></td>
+									<td ><?= numberFormatReciclaje( round($general,2)*100); ?></td>
 								</tr>
 								<?php 
                                         }

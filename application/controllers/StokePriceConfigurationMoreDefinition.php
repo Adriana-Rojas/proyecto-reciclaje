@@ -3,13 +3,13 @@
  *************************************************************************
  *************************************************************************
  Creado por:                 	Juan Carlos Escobar Baquero
- Correo electrónico:          	jcescobarba@gmail.com
- Creación:                    	27/02/2018
- Modificación:                	2019/11/06
- Propósito:						Controlador para la creación de las opciones que incluye CIREC dentro del proceso de atención para así ser relacionados dentro de la cotización.
+ Correo electrï¿½nico:          	jcescobarba@gmail.com
+ Creaciï¿½n:                    	27/02/2018
+ Modificaciï¿½n:                	2019/11/06
+ Propï¿½sito:						Controlador para la creaciï¿½n de las opciones que inclRECICLAJEIREC dentro del proceso de atenciï¿½n para asï¿½ ser relacionados dentro de la cotizaciï¿½n.
  *************************************************************************
  *************************************************************************
- ******************** BOGOTÁ COLOMBIA 2017 *******************************
+ ******************** BOGOTï¿½ COLOMBIA 2017 *******************************
  */
 defined('BASEPATH') or exit('No direct script access allowed');
 
@@ -31,21 +31,21 @@ class StokePriceConfigurationMoreDefinition extends CI_Controller
     public function board()
     {
         /**
-         * Panel principal en donde se listarán los diferentes registros creados para el parametro al cual se ha ingresado
+         * Panel principal en donde se listarï¿½n los diferentes registros creados para el parametro al cual se ha ingresado
          */
         
-        // Valido si la sessión existe en caso contrario saco al usuario
+        // Valido si la sessiï¿½n existe en caso contrario saco al usuario
         $mainPage = "StokePriceConfigurationMoreDefinition/board";
         if ($this->FunctionsAdmin->validateSession($mainPage)) {
-            // Pinto las vistas adicionales a través de la función pintaComun del helper hospitium
+            // Pinto las vistas adicionales a travï¿½s de la funciï¿½n pintaComun del helper hospitium
             $mainPage = "StokePriceConfigurationMoreDefinition/board";
             $data = null;
-            // Pinto la cabecera principal de las páginas internas
+            // Pinto la cabecera principal de las pï¿½ginas internas
             showCommon($this->session->userdata('auxiliar'), $this, $mainPage, null, null);
-            // Pinto la información de los parametros de la aplicación
+            // Pinto la informaciï¿½n de los parametros de la aplicaciï¿½n
             
             /**
-             * Información relacionada con la plantilla principal Pinto la pantalla *
+             * Informaciï¿½n relacionada con la plantilla principal Pinto la pantalla *
              */
             $data['mainPage'] = $mainPage;
             $data['board'] = "Valores parametrizados";
@@ -58,17 +58,17 @@ class StokePriceConfigurationMoreDefinition extends CI_Controller
             $data['listaLista'] = $this->FunctionsGeneral->selectValoresListaTabla("COT_INCLUYE");
             
             // Pinto plantilla principal
-            // Pinto la lista genérica de parametros que se debe tener en cuenta dentro del sistema de parámetros
+            // Pinto la lista genï¿½rica de parametros que se debe tener en cuenta dentro del sistema de parï¿½metros
             $this->load->view('common/boards/board', $data);
             
             /**
-             * Fin: Información relacionada con la plantilla principal Pinto la pantalla
+             * Fin: Informaciï¿½n relacionada con la plantilla principal Pinto la pantalla
              */
             
-            // Pinto el final de la página (páginas internas)
+            // Pinto el final de la pï¿½gina (pï¿½ginas internas)
             showCommonEnds($this, null, null);
         } else {
-            // Retorno a la página principal
+            // Retorno a la pï¿½gina principal
             header("Location: " . base_url());
         }
     }
@@ -78,16 +78,16 @@ class StokePriceConfigurationMoreDefinition extends CI_Controller
         /**
          * Formulario para crear un nuevo registro del parametro
          */
-        // Valido si la sessión existe en caso contrario saco al usuario
+        // Valido si la sessiï¿½n existe en caso contrario saco al usuario
         $mainPage = "StokePriceConfigurationMoreDefinition/board";
         if ($this->FunctionsAdmin->validateSession($mainPage)) {
-            // Cargo la página principal
+            // Cargo la pï¿½gina principal
             $data = null;
-            // Pinto la cabecera principal de las páginas internas
+            // Pinto la cabecera principal de las pï¿½ginas internas
             showCommon($this->session->userdata('auxiliar'), $this, $mainPage, null, null);
             
             /**
-             * Información relacionada con la plantilla principal Pinto la pantalla *
+             * Informaciï¿½n relacionada con la plantilla principal Pinto la pantalla *
              */
             
             // Inicializo variables de la vista
@@ -99,17 +99,17 @@ class StokePriceConfigurationMoreDefinition extends CI_Controller
             $data['placeHolder'] = "Ej. Observaci&oacute;n est&aacute;ndar ";
             // Cargo vista
             $this->load->view('stokePrice/configuration/formConfigurationMoreDefinition', $data);
-            // Cargo validación de formulario
+            // Cargo validaciï¿½n de formulario
             $this->load->view('validation/stokePrice/configuration/stokePriceConfigurationMoreDefinitionValidation');
             
             /**
-             * Fin: Información relacionada con la plantilla principal Pinto la pantalla
+             * Fin: Informaciï¿½n relacionada con la plantilla principal Pinto la pantalla
              */
             
-            // Pinto el final de la página (páginas internas)
+            // Pinto el final de la pï¿½gina (pï¿½ginas internas)
             showCommonEnds($this, null, null);
         } else {
-            // Retorno a la página principal
+            // Retorno a la pï¿½gina principal
             header("Location: " . base_url());
         }
     }
@@ -117,20 +117,20 @@ class StokePriceConfigurationMoreDefinition extends CI_Controller
     public function edit($id)
     {
         /**
-         * Formulario para editar la información previamente creada para el parametro de la aplicación
+         * Formulario para editar la informaciï¿½n previamente creada para el parametro de la aplicaciï¿½n
          */
-        // Valido si la sessión existe en caso contrario saco al usuario
+        // Valido si la sessiï¿½n existe en caso contrario saco al usuario
         $mainPage = "StokePriceConfigurationMoreDefinition/board";
         if ($this->FunctionsAdmin->validateSession($mainPage)) {
             $id = $this->FunctionsGeneral->getFieldFromTable("COT_INCLUYE", "ID", $this->encryption->decrypt($id));
             if ($id != '') {
-                // Pinto las vistas adicionales a través de la función showCommon del helper
+                // Pinto las vistas adicionales a travï¿½s de la funciï¿½n showCommon del helper
                 $data = null;
-                // Pinto la cabecera principal de las páginas internas
+                // Pinto la cabecera principal de las pï¿½ginas internas
                 showCommon($this->session->userdata('auxiliar'), $this, $mainPage, null, null);
                 
                 /**
-                 * Información relacionada con la plantilla principal Pinto la pantalla *
+                 * Informaciï¿½n relacionada con la plantilla principal Pinto la pantalla *
                  */
                 
                 // Inicializo variables de la vista
@@ -145,73 +145,73 @@ class StokePriceConfigurationMoreDefinition extends CI_Controller
                 
                 // Cargo vista
                 $this->load->view('stokePrice/configuration/formConfigurationMoreDefinition', $data);
-                // Cargo validación de formulario
+                // Cargo validaciï¿½n de formulario
                 $this->load->view('validation/stokePrice/configuration/stokePriceConfigurationMoreDefinitionValidation');
                 
                 /**
-                 * Fin: Información relacionada con la plantilla principal Pinto la pantalla
+                 * Fin: Informaciï¿½n relacionada con la plantilla principal Pinto la pantalla
                  */
                 
-                // Pinto el final de la página (páginas internas)
+                // Pinto el final de la pï¿½gina (pï¿½ginas internas)
                 showCommonEnds($this, null, null);
             } else {
-                // Pinto mensaje para retornar a la aplicación informando que no hay información para la consulta realizada
+                // Pinto mensaje para retornar a la aplicaciï¿½n informando que no hay informaciï¿½n para la consulta realizada
                 $this->session->set_userdata('id', $id);
                 $this->session->set_userdata('auxiliar', "notInformationGeneral");
-                // Redirecciono la página
+                // Redirecciono la pï¿½gina
                 redirect(base_url() . "StokePriceConfigurationMoreDefinition/board");
             }
         } else {
-            // Retorno a la página principal
+            // Retorno a la pï¿½gina principal
             header("Location: " . base_url());
         }
     }
 
     /**
      * ***********************************************************************************************************
-     * RUTINAS PARA GUARDAR INFORMACIÒN
+     * RUTINAS PARA GUARDAR INFORMACIï¿½N
      * ****************************************************************************************************** *
      */
     public function saveRegister()
     {
         /**
-         * Guardo la información del parametro, para lo cual se puede crear o actualizar la misma dependiendo el valor que se reciba dentro de la variable valida
+         * Guardo la informaciï¿½n del parametro, para lo cual se puede crear o actualizar la misma dependiendo el valor que se reciba dentro de la variable valida
          */
         $mainPage = "StokePriceConfigurationMoreDefinition/board";
         if ($this->FunctionsAdmin->validateSession($mainPage)) {
-            // Página principal a donde debo retornar
+            // Pï¿½gina principal a donde debo retornar
             $mainPage = "StokePriceConfigurationMoreDefinition/board";
             $nombre = $this->security->xss_clean($this->input->post('nombre'));
             if ($this->encryption->decrypt($this->security->xss_clean($this->input->post('valida'))) == 'newRegister') {
                 if ($this->FunctionsGeneral->getQuantityFieldFromTable("COT_INCLUYE", "NOMBRE", $nombre) == 0) {
                     // Creo el registro
                     $id = $this->FunctionsGeneral->insertTwoParameter("COT_INCLUYE", "NOMBRE", $nombre,"DESCRIPCION",$this->security->xss_clean($this->input->post('descripcion')),  $this->session->userdata('usuario'));
-                    // Pinto mensaje para retornar a la aplicación
+                    // Pinto mensaje para retornar a la aplicaciï¿½n
                     $this->session->set_userdata('id', $nombre);
                     $this->session->set_userdata('auxiliar', 'configUpdate');
-                    // Redirecciono la página
+                    // Redirecciono la pï¿½gina
                     redirect(base_url() . $mainPage);
                 } else {
-                    // Creo mensaje de creaciòn de usuario
+                    // Creo mensaje de creaciï¿½n de usuario
                     $mensaje = "ConfigExist";
-                    // Pinto mensaje para retornar a la aplicación
+                    // Pinto mensaje para retornar a la aplicaciï¿½n
                     $this->session->set_userdata('id', $nombre);
                     $this->session->set_userdata('auxiliar', $mensaje);
-                    // Redirecciono la página
+                    // Redirecciono la pï¿½gina
                     redirect(base_url() . $mainPage);
                 }
             } else {
                 // Actualizo los valores para el parametro respectivo en la tabla dada
                 $this->FunctionsGeneral->updateByID("COT_INCLUYE", "NOMBRE", $nombre, $this->encryption->decrypt($this->security->xss_clean($this->input->post('id'))), $this->session->userdata('usuario'));
                 $this->FunctionsGeneral->updateByID("COT_INCLUYE", "DESCRIPCION",$this->security->xss_clean($this->input->post('descripcion')), $this->encryption->decrypt($this->security->xss_clean($this->input->post('id'))), $this->session->userdata('usuario'));
-                // Pinto mensaje para retornar a la aplicación
+                // Pinto mensaje para retornar a la aplicaciï¿½n
                 $this->session->set_userdata('id', $nombre);
                 $this->session->set_userdata('auxiliar', 'configUpdate');
-                // Redirecciono la página
+                // Redirecciono la pï¿½gina
                 redirect(base_url() . $mainPage);
             }
         } else {
-            // Retorno a la página principal
+            // Retorno a la pï¿½gina principal
             header("Location: " . base_url());
         }
     }
@@ -221,13 +221,13 @@ class StokePriceConfigurationMoreDefinition extends CI_Controller
         /**
          * Inactivo el registro para el cual se tiene asociado el valor $id
          */
-        // Valido si la sessión existe en caso contrario saco al usuario
+        // Valido si la sessiï¿½n existe en caso contrario saco al usuario
         $mainPage = "StokePriceConfigurationMoreDefinition/board";
         if ($this->FunctionsAdmin->validateSession($mainPage)) {
-            // Página principal a donde debo retornar
+            // Pï¿½gina principal a donde debo retornar
             $mainPage = "StokePriceConfigurationMoreDefinition/board";
             
-            // Cargo información de la lista teniendo en cuenta el id dado
+            // Cargo informaciï¿½n de la lista teniendo en cuenta el id dado
             // Obtengo el id del contacto
             $id = $this->FunctionsGeneral->getFieldFromTable("COT_INCLUYE", "ID", $this->encryption->decrypt($id));
             if ($id != '') {
@@ -239,20 +239,20 @@ class StokePriceConfigurationMoreDefinition extends CI_Controller
                 }
                 $message = 'changeStateGeneral';
                 $this->FunctionsGeneral->updateByID("COT_INCLUYE", "ESTADO", $estado, $id, $this->session->userdata('usuario'));
-                // Pinto mensaje para retornar a la aplicación
+                // Pinto mensaje para retornar a la aplicaciï¿½n
                 $this->session->set_userdata('id', $id);
                 $this->session->set_userdata('auxiliar', $message);
-                // Redirecciono la página
+                // Redirecciono la pï¿½gina
                 redirect(base_url() . $mainPage);
             } else {
-                // Pinto mensaje para retornar a la aplicación informando que no hay información para la consulta realizada
+                // Pinto mensaje para retornar a la aplicaciï¿½n informando que no hay informaciï¿½n para la consulta realizada
                 $this->session->set_userdata('id', $id);
                 $this->session->set_userdata('auxiliar', "notInformationGeneral");
-                // Redirecciono la página
+                // Redirecciono la pï¿½gina
                 redirect(base_url() . $mainPage);
             }
         } else {
-            // Retorno a la página principal
+            // Retorno a la pï¿½gina principal
             header("Location: " . base_url());
         }
     }

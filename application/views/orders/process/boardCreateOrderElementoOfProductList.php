@@ -405,7 +405,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									</table> -->
 									<!-- <div class="card-body">
 								        <h3>
-											<b class="text-danger">Costo neto despiece: $ <?= numberFormatEvolution($totalCosto);?></b>
+											<b class="text-danger">Costo neto despiece: $ <?= numberFormatReciclaje($totalCosto);?></b>
 										</h3> 
 									</div>  -->
 									<?php

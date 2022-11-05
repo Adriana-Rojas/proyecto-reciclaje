@@ -68,15 +68,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 <td>
                                                     <?php
                                                         $trm= trmTranslate($this,$value->ID);
-                                                        echo  numberFormatEvolution($value->MATERIALES* $trm);
+                                                        echo  numberFormatReciclaje($value->MATERIALES* $trm);
                                 
                                                      ?>
                                                 </td>
                                                 <td>
-                                                    <?= numberFormatEvolution($value->MANOOBRA);?>
+                                                    <?= numberFormatReciclaje($value->MANOOBRA);?>
                                                 </td>
                                                 <td>
-                                                    <?= numberFormatEvolution($value->ASOCIADOS);?>
+                                                    <?= numberFormatReciclaje($value->ASOCIADOS);?>
                                                 </td>
                                                	<td>
                                                		<span class="<?= validaEstadosGenerales($value->ESTADO,'CLASE')?>">

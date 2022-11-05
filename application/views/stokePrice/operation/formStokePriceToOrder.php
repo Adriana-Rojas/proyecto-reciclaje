@@ -159,9 +159,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 										</div>
 									</td>
 									<!-- 
-									<td class="text-right"><?= numberFormatEvolution($value->CANTIDAD);?></td>
-									<td class="text-right"><?= numberFormatEvolution($value->VALOR);?></td>
-									<td class="text-right"><?= numberFormatEvolution($value->CANTIDAD* $value->VALOR);?></td>
+									<td class="text-right"><?= numberFormatReciclaje($value->CANTIDAD);?></td>
+									<td class="text-right"><?= numberFormatReciclaje($value->VALOR);?></td>
+									<td class="text-right"><?= numberFormatReciclaje($value->CANTIDAD* $value->VALOR);?></td>
  -->
 								</tr>
     								<?php
@@ -179,13 +179,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="col-md-12">
 						<div class="pull-right m-t-30 text-right">
 							<h3>
-								<b>Sub total cotizaci&oacute;n :</b> $ <?= numberFormatEvolution($valor);?>
+								<b>Sub total cotizaci&oacute;n :</b> $ <?= numberFormatReciclaje($valor);?>
         						</h3>
 							<h3>
-								<b>Descuento:</b> $ <?= numberFormatEvolution($valor* $descuento);?>
+								<b>Descuento:</b> $ <?= numberFormatReciclaje($valor* $descuento);?>
         						</h3>
 							<h3>
-								<b class="text-danger">Total cotizaci&oacute;n: $ <?= numberFormatEvolution($valor - ($valor* $descuento));?></b>
+								<b class="text-danger">Total cotizaci&oacute;n: $ <?= numberFormatReciclaje($valor - ($valor* $descuento));?></b>
 							</h3>
 						</div>
 						<div class="clearfix"></div>

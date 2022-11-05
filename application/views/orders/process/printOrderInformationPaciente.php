@@ -3094,7 +3094,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column0 style44 null style52" colspan="5" rowspan="4">
                     <div style="position: relative;"><img src="<?= base_url() ?>/assets/images/logoCirec.png" width="100%"  /></div>
                   </td>
-                  <td class="column5 style32 s style40" colspan="6" rowspan="4">CENTRO INTEGRAL DE REHABILITACION COLOMBIA. CIREC <br />
+                  <td class="column5 style32 s style40" colspan="6" rowspan="4">RECICLAJE <br />
                     &nbsp;ACTA DE ENTREGA Y CERTIFICADO DE GARANTIA<br />
                     GESTIÓN DE LOGÍSTICA</td>
                   <td class="column11 style24 s style27" colspan="3" rowspan="2">Código: </td>
@@ -3141,7 +3141,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 </tr>
                 <tr class="row6">
                   <td class="column0">&nbsp;</td>
-                  <td class="column1 style99 s style99" colspan="9">EL CENTRO INTEGRAL DE REHABILITACION COLOMBIA hace entrega con fecha </td>
+                  <td class="column1 style99 s style99" colspan="9">RECICLAJE hace entrega con fecha </td>
                   <td class="column10 style22 null style22" colspan="3"></td>
                   <td class="column13 style23 s style23" colspan="3">&nbsp;&nbsp;&nbsp;al usuario (a)</td>
                   <td class="column16 style1 null"></td>
@@ -3349,7 +3349,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column1 style71 s style79" colspan="4" rowspan="4">CAUSAS DE ANULACIÓN DE LA GARANTÍA:</td>
                   <td class="column5 style80 s style88" colspan="10" rowspan="4">• Cuando el periodo de garantía haya expirado.<br />
                     • Cuando se utilice el dispositivo médico bajo condiciones para las cuales no fue fabricado y adaptado, o no se tengan en cuenta las recomendaciones de uso.<br />
-                    • Cuando los dispositivos médicos han sido modificados por personal no autorizado por CIREC.<br />
+                    • Cuando los dispositivos médicos han sido modificados por personal no autorizado por RECICLAJE.<br />
                     • Cuando se presenten alteraciones de tipo médico, variaciones antropométricas, de rendimiento o condiciones de discapacidad no presentes al inicio de la vigencia de la garantía y que limite o altere la utilización del dispositivo médico.<br />
                     • Cuando el serial del dispositivo medico recibido por garantía no coincida con el entregado.<br />
                     • Abandono injustificado del proceso de rehabilitación, dejando el dispositivo médico en la institución o llevándolo por más de tres (3) meses en calidad de préstamo.<br />
@@ -3437,7 +3437,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column0 style44 null style52" colspan="5" rowspan="4">
                     <div style="position: relative;"><img style="position: absolute; z-index: 1; left: 0px; top: 14px; width: 129px; height: 65px;" src="zip:///home/CloudConvertio/tmp/in_work/a65b577c4f9d45c0c6f11c650e283462.xlsx#xl/media/image4.png" border="0" /></div>
                   </td>
-                  <td class="column5 style32 s style40" colspan="6" rowspan="4">CENTRO INTEGRAL DE REHABILITACION DE COLOMBIA. CIREC <br />
+                  <td class="column5 style32 s style40" colspan="6" rowspan="4">CENTRO INTEGRAL DE REHABILITACION DE COLOMBIA. RECICLAJE <br />
                     CERTIFICADO DE GARANTIA<br />
                     GESTIÓN DE LOGÍSTICA</td>
                   <td class="column11 style24 s style27" colspan="3" rowspan="2">Código: </td>
@@ -3547,7 +3547,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column1 style53 s style61" colspan="4" rowspan="9">CONDICIONES GENERALES</td>
                   <td class="column5 style62 s style70" colspan="10" rowspan="9">• El usuario tiene derecho a tres (3) revisiones del dispositivo médico durante el periodo de vigencia de la garantía, sin costo alguno.<br />
                     • Si el elemento objeto de la garantía es susceptible de reparación, ésta se efectuará; de lo contrario, se hará la sustitución del elemento previo concepto técnico.<br />
-                    • En los casos en que la reparación de algún componente del dispositivo médico no pueda ser efectuada en CIREC, ésta será enviada al fabricante. con un tiempo aproximado de respuesta de cuarenta y cinco (45) días.<br />
+                    • En los casos en que la reparación de algún componente del dispositivo médico no pueda ser efectuada en RECICLAJE, ésta será enviada al fabricante. con un tiempo aproximado de respuesta de cuarenta y cinco (45) días.<br />
                     • Para elementos importados como pies y rodillas, el cambio se hará sólo una vez durante la vigencia de la garantía. <br />
                   </td>
                 </tr>
