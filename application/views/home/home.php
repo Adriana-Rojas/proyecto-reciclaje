@@ -173,7 +173,7 @@ if ($clase == 'success') {
 			<div class="card-body">
 				<form class="form-horizontal " id="loginform" action="<?= base_url() ?>Login" method="post" autocomplete="off">
 					<a href="javascript:void(0)" class="text-center db">
-						<img src="<?= base_url() ?>assets/images/logo.jpg" alt="Home" width="80%"  />
+					<p style="text-align:center"><img src="<?= base_url() ?>assets/images/logo.jpg" alt="Home" width="80%"  /></p>
 					</a>
 					<div class="form-group m-t-10">
 						<div class="col-xs-12">
