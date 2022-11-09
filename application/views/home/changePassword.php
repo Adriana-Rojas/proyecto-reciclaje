@@ -3,13 +3,13 @@
  *************************************************************************
  *************************************************************************
  Creado por:                 	Juan Carlos Escobar Baquero
- Correo electrónico:          	jcescobarba@gmail.com
- Creación:                    	27/02/2018
- Modificación:                	2019/11/06
- Propósito:						Cabecerá de la página de logueo del sistema de información SaludColombia.
+ Correo electrï¿½nico:          	jcescobarba@gmail.com
+ Creaciï¿½n:                    	27/02/2018
+ Modificaciï¿½n:                	2019/11/06
+ Propï¿½sito:						Cabecerï¿½ de la pï¿½gina de logueo del sistema de informaciï¿½n SaludColombia.
  *************************************************************************
  *************************************************************************
- ******************** BOGOTÁ COLOMBIA 2017 *******************************
+ ******************** BOGOTï¿½ COLOMBIA 2017 *******************************
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 if($clase=='success'){
@@ -224,7 +224,7 @@ if($especialesId==1){
             <div class="card-body">
                 <form class="form-horizontal " id="changePassword-form" action="<?= base_url()?>Login/changePassword" method="post" autocomplete="off">
                     <a href="javascript:void(0)" class="text-center db">
-                    	<img src="<?= base_url()?>assets/images/logoCirec.png" alt="Home" />
+                    	<img src="<?= base_url()?>assets/images/logo.jpg" alt="Home" />
                     </a>
                     <div class="form-group m-t-40">
                         <div class="col-xs-12">

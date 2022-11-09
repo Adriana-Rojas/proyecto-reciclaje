@@ -28,7 +28,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card card-body printableArea">
-                        	<img src="<?= base_url()?>/assets/images/logoCirec.png"  width="292 px" height="96 px">
+                        	<img src="<?= base_url()?>/assets/images/logo.jpg"  width="292 px" height="96 px">
                             <small style="text-align:right; "> <?= $this->FunctionsGeneral->getFieldFromTableNotId("ADM_PARAMETROS", "COD_ORDENES", "ID", 1);?></small>
                             <hr>
                             <div class="row">

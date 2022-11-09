@@ -29,7 +29,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <div class="row">
   <div class="col-md-12">
     <div class="card card-body printableArea">
-      <img src="<?= base_url() ?>/assets/images/logoCirec.png" width="292 px" height="96 px">
+      <img src="<?= base_url() ?>/assets/images/logo.jpg" width="292 px" height="96 px">
       <small style="text-align:right; "> <?= $this->FunctionsGeneral->getFieldFromTableNotId("ADM_PARAMETROS", "COD_ORDENES", "ID", 1); ?></small>
       <hr>
       <div class="row">
@@ -3092,7 +3092,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 </tr>
                 <tr class="row1">
                   <td class="column0 style44 null style52" colspan="5" rowspan="4">
-                    <div style="position: relative;"><img src="<?= base_url() ?>/assets/images/logoCirec.png" width="100%"  /></div>
+                    <div style="position: relative;"><img src="<?= base_url() ?>/assets/images/logo.jpg" width="100%"  /></div>
                   </td>
                   <td class="column5 style32 s style40" colspan="6" rowspan="4">RECICLAJE <br />
                     &nbsp;ACTA DE ENTREGA Y CERTIFICADO DE GARANTIA<br />

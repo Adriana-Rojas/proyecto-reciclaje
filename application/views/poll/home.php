@@ -188,7 +188,7 @@ if ($validador) {
 				<div class="col-md-6">
 					<a href="<?= base_url()?>PollAppPoll/" >
 					<img alt="Bootstrap Image Preview"
-						src="<?= base_url()?>assets/images/logoCirec.png" />
+						src="<?= base_url()?>assets/images/logo.jpg" />
 						</a>
 				</div>
 				<div class="col-md-6">

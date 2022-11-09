@@ -33,7 +33,7 @@ $validador=companyListValidation($this, $empresaId);
 <div class="row">
 	<div class="col-md-12">
 		<div class="card card-body printableArea">
-			<img src="<?= base_url()?>/assets/images/logoCirec.png"
+			<img src="<?= base_url()?>/assets/images/logo.jpg"
 				width="292 px" height="96 px">
 			<small style="text-align:right; "> <?= $codigoCalidad;?></small>
 			<hr>
