@@ -224,7 +224,7 @@ if($especialesId==1){
             <div class="card-body">
                 <form class="form-horizontal " id="changePassword-form" action="<?= base_url()?>Login/changePassword" method="post" autocomplete="off">
                     <a href="javascript:void(0)" class="text-center db">
-                    	<img src="<?= base_url()?>assets/images/logo.jpg" alt="Home" />
+                    	<img src="<?= base_url()?>assets/images/logo.png"  width="50" height="50">
                     </a>
                     <div class="form-group m-t-40">
                         <div class="col-xs-12">
