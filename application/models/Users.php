@@ -246,6 +246,7 @@ class Users extends CI_Model {
         		and ADM_USUROLPER.ID_ROLPERFIL=ADM_ROLPERFIL.ID
         		AND ADM_ROLPERFIL.ID_PERFIL=ADM_PERFIL.ID
                 order by ADM_USUARIO.ID DESC";
+				//echo $sql;
         $result=$this->db->query($sql);
         if($result->num_rows()>0){
             return $result->result();
