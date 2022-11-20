@@ -19,7 +19,7 @@ class Users extends CI_Model {
 
 	/* ---------------------------------------------------------- INSERT ---------------------------------------------------------*/
     
-	public function insertUser($id,$nombres, $apellidos, $correo ,$clave,$pagina ,$usuario){
+	public function insertUser($id,$nombres, $apellidos, $correo,$telefono ,$clave,$pagina ,$usuario){
 		/** Rutina para hacer el insert sobre la tabla usuarios, se reciben los valores de 
 		 *  nombres apellidos, clave, y usuario que realiza la operaci�n*/
 		$data = array(
@@ -27,6 +27,7 @@ class Users extends CI_Model {
                 'NOMBRES' => $nombres,
 				'APELLIDOS' => $apellidos,
                 'CORREO' => $correo,
+                'TELEFONO' => $telefono,
 				'CLAVE' => $clave,
 				'PAGINA' => $pagina,
 				'ESTADO' => 'I',
@@ -130,7 +131,7 @@ class Users extends CI_Model {
 	
     /* ---------------------------------------------------------- UPDATE ---------------------------------------------------------*/
     
-    public function updateUser($id,$nombres, $apellidos, $correo ,$pagina ,$usuario){
+    public function updateUser($id,$nombres, $apellidos, $correo,$telefono ,$pagina ,$usuario){
         /** Rutina para hacer el insert sobre la tabla usuarios, se reciben los valores de 
          *  nombres apellidos, clave, y usuario que realiza la operaci�n*/
     	if ($pagina==null){
@@ -138,6 +139,7 @@ class Users extends CI_Model {
     				'NOMBRES' => $nombres,
     				'APELLIDOS' => $apellidos,
     				'CORREO' => $correo,
+    				'TELEFONO' => $telefono,
     				'UMOD' => $usuario,
     				'FMOD' => cambiaHoraServer()
     		);
@@ -146,6 +148,7 @@ class Users extends CI_Model {
     				'NOMBRES' => $nombres,
     				'APELLIDOS' => $apellidos,
     				'CORREO' => $correo,
+    				'TELEFONO' => $telefono,
     				'PAGINA' => $pagina,
     				'UMOD' => $usuario,
     				'FMOD' => cambiaHoraServer()

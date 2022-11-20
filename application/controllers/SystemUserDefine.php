@@ -9,7 +9,7 @@
  Prop�sito:						P�gina principal de la administraci�n de la aplicaci�n.
  *************************************************************************
  *************************************************************************
- ******************** BOGOT� COLOMBIA 2017 *******************************
+ ******************** BOGOT� COLOMBeditIA 2017 *******************************
  */
 defined('BASEPATH') or exit('No direct script access allowed');
 
