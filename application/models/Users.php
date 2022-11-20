@@ -4,10 +4,10 @@
  *************************************************************************
  *************************************************************************
  Creado por:                 Juan Carlos Escobar Baquero
- Correo electrónico:         jcescobarba@gmail.com
-  Creación:                    	27/02/2018
- Modificación:                	2019/11/06
- Propósito:                  Funciones de las actividades generales que se tienen que realizar hacia la tabla usuarios
+ Correo electrï¿½nico:         jcescobarba@gmail.com
+  Creaciï¿½n:                    	27/02/2018
+ Modificaciï¿½n:                	2019/11/06
+ Propï¿½sito:                  Funciones de las actividades generales que se tienen que realizar hacia la tabla usuarios
 */
 
 class Users extends CI_Model {
@@ -21,7 +21,7 @@ class Users extends CI_Model {
     
 	public function insertUser($id,$nombres, $apellidos, $correo ,$clave,$pagina ,$usuario){
 		/** Rutina para hacer el insert sobre la tabla usuarios, se reciben los valores de 
-		 *  nombres apellidos, clave, y usuario que realiza la operación*/
+		 *  nombres apellidos, clave, y usuario que realiza la operaciï¿½n*/
 		$data = array(
 				'ID' => $id,
                 'NOMBRES' => $nombres,
@@ -42,7 +42,7 @@ class Users extends CI_Model {
 	
 	public function insertUserReporte($usuario,$modulo,$usuario2,$estadoDefecto){
 		/** Rutina para hacer el insert sobre la tabla reporte de usuarios, se reciben los valores de
-		 *  usuario que realizará el reporte*/
+		 *  usuario que realizarï¿½ el reporte*/
 		$data = array(
 				'USUARIO' => $usuario,
 				'MODULO' => $modulo,
@@ -73,7 +73,7 @@ class Users extends CI_Model {
 	}
     
     public function insertUserHistory($idUsuario,$origen){
-        /** Guardo el historico de ingreso de sesión*/
+        /** Guardo el historico de ingreso de sesiï¿½n*/
     	
     	//Traigo el valor de ID
     	$table='ADM_HISINGUSU';
@@ -90,7 +90,7 @@ class Users extends CI_Model {
     }
     
     public function insertUserHistoryPsw($id,$clave){
-        /** Guardo el historico de ingreso de sesión*/
+        /** Guardo el historico de ingreso de sesiï¿½n*/
     	
     	$table='ADM_HISCLAUSU';
     	$consecutivo =$this->FunctionsGeneral->countMax($table,'ID',1);
@@ -132,7 +132,7 @@ class Users extends CI_Model {
     
     public function updateUser($id,$nombres, $apellidos, $correo ,$pagina ,$usuario){
         /** Rutina para hacer el insert sobre la tabla usuarios, se reciben los valores de 
-         *  nombres apellidos, clave, y usuario que realiza la operación*/
+         *  nombres apellidos, clave, y usuario que realiza la operaciï¿½n*/
     	if ($pagina==null){
     		$data = array(
     				'NOMBRES' => $nombres,
@@ -222,6 +222,7 @@ class Users extends CI_Model {
 						ADM_USUARIO.NOMBRES,
 						ADM_USUARIO.APELLIDOS,
 						ADM_USUARIO.CORREO,
+						ADM_USUARIO.TELEFONO,
 						ADM_USUARIO.CLAVE,
 						ADM_USUARIO.FCCON,
 						ADM_USUARIO.FUING,

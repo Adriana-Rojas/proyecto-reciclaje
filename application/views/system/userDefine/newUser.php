@@ -3,13 +3,13 @@
  *************************************************************************
  *************************************************************************
  Creado por:                 	Juan Carlos Escobar Baquero
- Correo electrónico:          	jcescobarba@gmail.com
- Creación:                    	27/02/2018
- Modificación:                	2019/11/06
- Propósito:						Página Web.
+ Correo electrï¿½nico:          	jcescobarba@gmail.com
+ Creaciï¿½n:                    	27/02/2018
+ Modificaciï¿½n:                	2019/11/06
+ Propï¿½sito:						Pï¿½gina Web.
  *************************************************************************
  *************************************************************************
- ******************** BOGOTÁ COLOMBIA 2018 *******************************
+ ******************** BOGOTï¿½ COLOMBIA 2018 *******************************
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -166,6 +166,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	                                    <div class="form-control-feedback" > </div>
                                     </div>
                                </div>
+							   <div class="form-group">
+                               		<label class="col-md-12" for="telefono">Telefono*</label>
+                                    <div class="col-md-12">
+	                                    <input type="text" class="form-control" id="telefono" name="telefono" 
+	                                    	value="<?= $telefono ?>"
+	                                        placeholder="Ej. 3219779439">
+	                                    <div class="form-control-feedback" > </div>
+                                    </div>
+                               </div>
                                <div class="form-group">
                                		<label class="col-md-12" for="perfil">Perfil de usuario *</label>
                                     <div class="col-md-12">
@@ -197,7 +206,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	                        </div>   
 	                    </div>
 	                </div>
-	                <!-- Botón de envio de formulario -->
+	                <!-- Botï¿½n de envio de formulario -->
 	                <div class="row">
 	                	<div class="col-sm-12">
 	                		<a href="<?= base_url()?>SystemUserDefine/board" class="btn  btn-primary btn-rounded pull-left waves-effect waves-light m-r-10"> 
@@ -213,7 +222,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	                	<br>
 	                	</div> 
 	                </div>
-	                <!-- FIN Botón de envio de formulario -->
+	                <!-- FIN Botï¿½n de envio de formulario -->
 	            </form>
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->

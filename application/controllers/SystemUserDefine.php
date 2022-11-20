@@ -3,13 +3,13 @@
  *************************************************************************
  *************************************************************************
  Creado por:                 	Juan Carlos Escobar Baquero
- Correo electrónico:          	jcescobarba@gmail.com
- Creación:                    	06/02/2017
- Modificación:                	2019/11/06
- Propósito:						Página principal de la administración de la aplicación.
+ Correo electrï¿½nico:          	jcescobarba@gmail.com
+ Creaciï¿½n:                    	06/02/2017
+ Modificaciï¿½n:                	2019/11/06
+ Propï¿½sito:						Pï¿½gina principal de la administraciï¿½n de la aplicaciï¿½n.
  *************************************************************************
  *************************************************************************
- ******************** BOGOTÁ COLOMBIA 2017 *******************************
+ ******************** BOGOTï¿½ COLOMBIA 2017 *******************************
  */
 defined('BASEPATH') or exit('No direct script access allowed');
 
@@ -32,20 +32,20 @@ class SystemUserDefine extends CI_Controller
     public function board()
     {
         /**
-         * Panel principal en donde se listarán los diferentes registros creados para el parametro al cual se ha ingresado
+         * Panel principal en donde se listarï¿½n los diferentes registros creados para el parametro al cual se ha ingresado
          */
-        // Valido si la sessión existe en caso contrario saco al usuario
+        // Valido si la sessiï¿½n existe en caso contrario saco al usuario
         $mainPage = "SystemUserDefine/board";
         if ($this->FunctionsAdmin->validateSession($mainPage)) {
-            // Pinto las vistas adicionales a través de la función pintaComun del helper hospitium
+            // Pinto las vistas adicionales a travï¿½s de la funciï¿½n pintaComun del helper hospitium
             $mainPage = "SystemUserDefine/board";
             $data = null;
-            // Pinto la cabecera principal de las páginas internas
+            // Pinto la cabecera principal de las pï¿½ginas internas
             showCommon($this->session->userdata('auxiliar'), $this, $mainPage, "myTable", null);
-            // Pinto la información de los parametros de la aplicación
+            // Pinto la informaciï¿½n de los parametros de la aplicaciï¿½n
             
             /**
-             * Información relacionada con la plantilla principal Pinto la pantalla *
+             * Informaciï¿½n relacionada con la plantilla principal Pinto la pantalla *
              */
             
             $data['mainPage'] = $mainPage;
@@ -63,13 +63,13 @@ class SystemUserDefine extends CI_Controller
             // Pinto plantilla principal
             $this->load->view('system/userDefine/board', $data);
             /**
-             * Fin: Información relacionada con la plantilla principal Pinto la pantalla
+             * Fin: Informaciï¿½n relacionada con la plantilla principal Pinto la pantalla
              */
             
-            // Pinto el final de la página (páginas internas)
+            // Pinto el final de la pï¿½gina (pï¿½ginas internas)
             showCommonEnds($this, null, null);
         } else {
-            // Retorno a la página principal
+            // Retorno a la pï¿½gina principal
             header("Location: " . base_url());
         }
     }
@@ -79,17 +79,17 @@ class SystemUserDefine extends CI_Controller
         /**
          * Formulario para crear un nuevo registro del parametro
          */
-        // Valido si la sessión existe en caso contrario saco al usuario
+        // Valido si la sessiï¿½n existe en caso contrario saco al usuario
         $mainPage = "SystemUserDefine/board";
         if ($this->FunctionsAdmin->validateSession($mainPage)) {
-            // Pinto las vistas adicionales a través de la función pintaComun del helper hospitium
+            // Pinto las vistas adicionales a travï¿½s de la funciï¿½n pintaComun del helper hospitium
             $mainPage = "SystemUserDefine/board";
             $data = null;
-            // Pinto la cabecera principal de las páginas internas
+            // Pinto la cabecera principal de las pï¿½ginas internas
             showCommon($this->session->userdata('auxiliar'), $this, $mainPage, null, null);
             
             /**
-             * Información relacionada con la plantilla principal Pinto la pantalla *
+             * Informaciï¿½n relacionada con la plantilla principal Pinto la pantalla *
              */
             
             // Inicializo variables de la vista
@@ -98,23 +98,24 @@ class SystemUserDefine extends CI_Controller
             $data['nombre'] = null;
             $data['apellido'] = null;
             $data['correo'] = null;
+            $data['telefono'] = null;
             $data['pagina'] = DEFAULT_PAGE;
             $data['tipo'] = null;
             $data['readOnly'] = null;
             $data['listaPadre'] = $this->FunctionsGeneral->selectValoresListaTabla("ADM_PERFIL", 'DESC');
             // Cargo vista
             $this->load->view('system/userDefine/newUser', $data);
-            // Cargo validación de formulario
+            // Cargo validaciï¿½n de formulario
             $this->load->view('validation/system/systemUserValidation');
             
             /**
-             * Fin: Información relacionada con la plantilla principal Pinto la pantalla
+             * Fin: Informaciï¿½n relacionada con la plantilla principal Pinto la pantalla
              */
             
-            // Pinto el final de la página (páginas internas)
+            // Pinto el final de la pï¿½gina (pï¿½ginas internas)
             showCommonEnds($this, null, null);
         } else {
-            // Retorno a la página principal
+            // Retorno a la pï¿½gina principal
             header("Location: " . base_url());
         }
     }
@@ -122,28 +123,29 @@ class SystemUserDefine extends CI_Controller
     public function edit($id)
     {
         /**
-         * Formulario para editar la información previamente creada para el parametro de la aplicación
+         * Formulario para editar la informaciï¿½n previamente creada para el parametro de la aplicaciï¿½n
          */
-        // Valido si la sessión existe en caso contrario saco al usuario
+        // Valido si la sessiï¿½n existe en caso contrario saco al usuario
         $mainPage = "SystemUserDefine/board";
         if ($this->FunctionsAdmin->validateSession($mainPage)) {
             $id = $this->FunctionsGeneral->getFieldFromTable("ADM_USUARIO", "ID", $this->encryption->decrypt($id));
             if ($id != '') {
-                // Pinto las vistas adicionales a través de la función showCommon del helper
+                // Pinto las vistas adicionales a travï¿½s de la funciï¿½n showCommon del helper
                 $mainPage = "SystemUserDefine/board";
                 $data = null;
-                // Pinto la cabecera principal de las páginas internas
+                // Pinto la cabecera principal de las pï¿½ginas internas
                 showCommon($this->session->userdata('auxiliar'), $this, $mainPage, null, null);
                 
                 /**
-                 * Información relacionada con la plantilla principal Pinto la pantalla *
+                 * Informaciï¿½n relacionada con la plantilla principal Pinto la pantalla *
                  */
                 
                 // Inicializo variables de la vista
                 $data['valida'] = $this->encryption->encrypt('edit');
                 $data['id'] = $id;
                 $data['readOnly'] = "readOnly='readOnly'";
-                $data['correo'] = $this->FunctionsGeneral->getFieldFromTable("ADM_USUARIO", "CORREO", $id);
+                $data['correo'] = $this->FunctionsGeneral->getFieldFromTable("ADM_USUARIO", "CORREO", $id);				
+                $data['telefono'] = $this->FunctionsGeneral->getFieldFromTable("ADM_USUARIO", "TELEFONO", $id);
                 $data['pagina'] = $this->FunctionsGeneral->getFieldFromTable("ADM_USUARIO", "PAGINA", $id);
                 $data['nombre'] = $this->FunctionsGeneral->getFieldFromTable("ADM_USUARIO", "NOMBRES", $id);
                 $data['apellido'] = $this->FunctionsGeneral->getFieldFromTable("ADM_USUARIO", "APELLIDOS", $id);
@@ -153,24 +155,24 @@ class SystemUserDefine extends CI_Controller
                 
                 // Cargo vista
                 $this->load->view('system/userDefine/newUser', $data);
-                // Cargo validación de formulario
+                // Cargo validaciï¿½n de formulario
                 $this->load->view('validation/system/systemUserValidation');
                 
                 /**
-                 * Fin: Información relacionada con la plantilla principal Pinto la pantalla
+                 * Fin: Informaciï¿½n relacionada con la plantilla principal Pinto la pantalla
                  */
                 
-                // Pinto el final de la página (páginas internas)
+                // Pinto el final de la pï¿½gina (pï¿½ginas internas)
                 showCommonEnds($this, null, null);
             } else {
-                // Pinto mensaje para retornar a la aplicación informando que no hay información para la consulta realizada
+                // Pinto mensaje para retornar a la aplicaciï¿½n informando que no hay informaciï¿½n para la consulta realizada
                 $this->session->set_userdata('id', $id);
                 $this->session->set_userdata('auxiliar', "notInformationGeneral");
-                // Redirecciono la página
+                // Redirecciono la pï¿½gina
                 redirect(base_url() . "ProfileDefine/board");
             }
         } else {
-            // Retorno a la página principal
+            // Retorno a la pï¿½gina principal
             header("Location: " . base_url());
         }
     }
@@ -180,14 +182,14 @@ class SystemUserDefine extends CI_Controller
         /**
          * Rutina para pintar el formulario del envio de correspondencia
          */
-        // Valido si la sessión existe en caso contrario saco al usuario
+        // Valido si la sessiï¿½n existe en caso contrario saco al usuario
         $mainPage = "SystemUserDefine/board";
         if ($this->FunctionsAdmin->validateSession($mainPage)) {
             // Usuario logueado dentro del sistema
             $id = $this->session->userdata('usuario');
             if ($id != '') {
                 $mainPage = "SystemUserDefine/board";
-                // Pinto las vistas adicionales a través de la función pintaComun del helper hospitium
+                // Pinto las vistas adicionales a travï¿½s de la funciï¿½n pintaComun del helper hospitium
                 showCommon($this->session->userdata('auxiliar'), $this, $mainPage, 'profileUser');
                 // Pinto la pantalla
                 $data['mainPage'] = $mainPage;
@@ -195,6 +197,7 @@ class SystemUserDefine extends CI_Controller
                 $data['nombre'] = $this->FunctionsGeneral->getFieldFromTable("ADM_USUARIO", "NOMBRES", $id);
                 $data['apellido'] = $this->FunctionsGeneral->getFieldFromTable("ADM_USUARIO", "APELLIDOS", $id);
                 $data['correo'] = $this->FunctionsGeneral->getFieldFromTable("ADM_USUARIO", "CORREO", $id);
+                $data['telefono'] = $this->FunctionsGeneral->getFieldFromTable("ADM_USUARIO", "TELEFONO", $id);
                 // Cargo la lista de acciones
                 $data['listaSiNo'] = $this->FunctionsAdmin->selectValoresListaAdministracion('SI_NO', '1');
                 $data['valorSINO'] = null;
@@ -211,27 +214,27 @@ class SystemUserDefine extends CI_Controller
                 $this->load->view('validation/system/systemUserProfileValidation', $data);
                 showCommonEnds($this, $mainPage, null);
             } else {
-                // Pinto mensaje para retornar a la aplicación informando que no hay información para la consulta realizada
+                // Pinto mensaje para retornar a la aplicaciï¿½n informando que no hay informaciï¿½n para la consulta realizada
                 $this->session->set_userdata('id', $id);
                 $this->session->set_userdata('auxiliar', "notInformationUser");
-                // Redirecciono la página
+                // Redirecciono la pï¿½gina
                 redirect(base_url() . "SystemUsers/board");
             }
         } else {
-            // Retorno a la página principal
+            // Retorno a la pï¿½gina principal
             header("Location: " . base_url());
         }
     }
 
     /**
      * ***********************************************************************************************************
-     * RUTINAS PARA GUARDAR INFORMACIÒN
+     * RUTINAS PARA GUARDAR INFORMACIï¿½N
      * ****************************************************************************************************** *
      */
     public function saveRegister()
     {
         /**
-         * Guardo la información del nuevo usuario creado dentro del sistema
+         * Guardo la informaciï¿½n del nuevo usuario creado dentro del sistema
          */
         $mainPage = "SystemUserDefine/board";
         if ($this->FunctionsAdmin->validateSession($mainPage)) {
@@ -243,42 +246,42 @@ class SystemUserDefine extends CI_Controller
                     $this->session->set_userdata('temporal', cadenaAleatoria(1));
                     $hash = password_hash($this->session->userdata('temporal'), PASSWORD_BCRYPT);
                     $clave = $this->encryption->encrypt($hash);
-                    $this->Users->insertUser($id, $this->security->xss_clean($this->input->post('nombre')), $this->security->xss_clean($this->input->post('apellido')), $this->security->xss_clean($this->input->post('correo')), $clave, $this->security->xss_clean($this->input->post('pagina')), $this->session->userdata('usuario'));
+                    $this->Users->insertUser($id, $this->security->xss_clean($this->input->post('nombre')), $this->security->xss_clean($this->input->post('apellido')), $this->security->xss_clean($this->input->post('correo')), $this->security->xss_clean($this->input->post('telefono')), $clave, $this->security->xss_clean($this->input->post('pagina')), $this->session->userdata('usuario'));
                     
                     // Creo los permisos respectivos
                     $idRolPer = $this->FunctionsGeneral->getFieldFromTableNotIdFields("ADM_ROLPERFIL", "ID", "ID_ROL", 1, "ID_PERFIL", $this->security->xss_clean($this->input->post('perfil')));
                     
                     $this->Users->insertUsuRolPer($id, $idRolPer, $this->session->userdata('usuario'));
                     
-                    // Envio mensaje de creaciòn de usuario
+                    // Envio mensaje de creaciï¿½n de usuario
                     $this->sendInformation($id, "sendInformationUser");
                 } else {
-                    // Creo mensaje de creaciòn de usuario
+                    // Creo mensaje de creaciï¿½n de usuario
                     $mensaje = "existUser";
-                    // Pinto mensaje para retornar a la aplicación
+                    // Pinto mensaje para retornar a la aplicaciï¿½n
                     $this->session->set_userdata('id', $id);
                     $this->session->set_userdata('auxiliar', $mensaje);
-                    // Redirecciono la página
+                    // Redirecciono la pï¿½gina
                     redirect(base_url() . "SystemUserDefine/board");
                 }
             } else {
                 $id = $this->security->xss_clean($this->input->post('codigo'));
-                // Actualizo la informaciòn del usuario
-                $this->Users->updateUser($id, $this->security->xss_clean($this->input->post('nombre')), $this->security->xss_clean($this->input->post('apellido')), $this->security->xss_clean($this->input->post('correo')), $this->security->xss_clean($this->input->post('pagina')), $this->session->userdata('usuario'));
+                // Actualizo la informaciï¿½n del usuario
+                $this->Users->updateUser($id, $this->security->xss_clean($this->input->post('nombre')), $this->security->xss_clean($this->input->post('apellido')), $this->security->xss_clean($this->input->post('correo')), $this->security->xss_clean($this->input->post('telefono')), $this->security->xss_clean($this->input->post('pagina')), $this->session->userdata('usuario'));
                 // Actualizo el rol perfil
                 $idRolPer = $this->FunctionsGeneral->getFieldFromTableNotIdFields("ADM_ROLPERFIL", "ID", "ID_ROL", 1, "ID_PERFIL", $this->security->xss_clean($this->input->post('perfil')));
                 $this->Users->updateUsuRolPer($id, $idRolPer, $this->session->userdata('usuario'));
-                // Pagina a donde retornará la información
+                // Pagina a donde retornarï¿½ la informaciï¿½n
                 $mainPage = "SystemUserDefine/board";
-                // Pinto mensaje para retornar a la aplicación
+                // Pinto mensaje para retornar a la aplicaciï¿½n
                 $this->session->set_userdata('id', $id);
                 $this->session->set_userdata('auxiliar', 'updateUser');
                 // echo $message;
-                // Redirecciono la página
+                // Redirecciono la pï¿½gina
                 redirect(base_url() . $mainPage);
             }
         } else {
-            // Retorno a la página principal
+            // Retorno a la pï¿½gina principal
             header("Location: " . base_url());
         }
     }
@@ -288,10 +291,10 @@ class SystemUserDefine extends CI_Controller
         /**
          * Rutina para pintar el formulario del envio de correspondencia
          */
-        // Valido si la sessión existe en caso contrario saco al usuario
+        // Valido si la sessiï¿½n existe en caso contrario saco al usuario
         $mainPage = "SystemUserDefine/board";
         if ($this->FunctionsAdmin->validateSession($mainPage)) {
-            // Cargo información del Contacto teniendo en cuenta el id dado
+            // Cargo informaciï¿½n del Contacto teniendo en cuenta el id dado
             // Obtengo el id del contacto
             $id = $this->FunctionsGeneral->getFieldFromTable("ADM_USUARIO", "ID", $this->encryption->decrypt($id));
             if ($id != '') {
@@ -308,27 +311,27 @@ class SystemUserDefine extends CI_Controller
                         $message = 'changeStateUser2';
                     }
                     $this->FunctionsGeneral->updateByID("ADM_USUARIO", "ESTADO", $estado, $id, $this->session->userdata('usuario'));
-                    // Pinto mensaje para retornar a la aplicación
+                    // Pinto mensaje para retornar a la aplicaciï¿½n
                     $this->session->set_userdata('id', $id);
                     $this->session->set_userdata('auxiliar', $message);
-                    // Redirecciono la página
+                    // Redirecciono la pï¿½gina
                     redirect(base_url() . "SystemUserDefine/board");
                 } else {
-                    // Pinto mensaje para retornar a la aplicación
+                    // Pinto mensaje para retornar a la aplicaciï¿½n
                     $this->session->set_userdata('id', $id);
                     $this->session->set_userdata('auxiliar', 'changeStateUser3');
-                    // Redirecciono la página
+                    // Redirecciono la pï¿½gina
                     redirect(base_url() . "SystemUserDefine/board");
                 }
             } else {
-                // Pinto mensaje para retornar a la aplicación informando que no hay información para la consulta realizada
+                // Pinto mensaje para retornar a la aplicaciï¿½n informando que no hay informaciï¿½n para la consulta realizada
                 $this->session->set_userdata('id', $id);
                 $this->session->set_userdata('auxiliar', "notInformationUser");
-                // Redirecciono la página
+                // Redirecciono la pï¿½gina
                 redirect(base_url() . "SystemUserDefine/board");
             }
         } else {
-            // Retorno a la página principal
+            // Retorno a la pï¿½gina principal
             header("Location: " . base_url());
         }
     }
@@ -338,30 +341,30 @@ class SystemUserDefine extends CI_Controller
         /**
          * Rutina para pintar el formulario del envio de correspondencia
          */
-        // Valido si la sessión existe en caso contrario saco al usuario
+        // Valido si la sessiï¿½n existe en caso contrario saco al usuario
         $mainPage = "SystemUserDefine/board";
         if ($this->FunctionsAdmin->validateSession($mainPage)) {
-            // Cargo información del Contacto teniendo en cuenta el id dado
+            // Cargo informaciï¿½n del Contacto teniendo en cuenta el id dado
             // Obtengo el id del contacto
             $id = $this->FunctionsGeneral->getFieldFromTable("ADM_USUARIO", "ID", $this->encryption->decrypt($id));
             if ($id != '') {
-                // Cargo en sesión la clave
+                // Cargo en sesiï¿½n la clave
                 $this->session->set_userdata('temporal', cadenaAleatoria(1));
                 $hash = password_hash($this->session->userdata('temporal'), PASSWORD_BCRYPT);
                 $clave = $this->encryption->encrypt($hash);
                 $this->FunctionsGeneral->updateByID("ADM_USUARIO", "CLAVE", $clave, $id, $this->session->userdata('usuario'));
                 $this->FunctionsGeneral->updateByID("ADM_USUARIO", "ESTADO", 'I', $id, $this->session->userdata('usuario'));
-                // Envio mensaje de creaciòn de usuario
+                // Envio mensaje de creaciï¿½n de usuario
                 $this->sendInformation($id, "sendInformationUser2");
             } else {
-                // Pinto mensaje para retornar a la aplicación informando que no hay información para la consulta realizada
+                // Pinto mensaje para retornar a la aplicaciï¿½n informando que no hay informaciï¿½n para la consulta realizada
                 $this->session->set_userdata('id', $id);
                 $this->session->set_userdata('auxiliar', "notInformationUser");
-                // Redirecciono la página
+                // Redirecciono la pï¿½gina
                 redirect(base_url() . "SystemUserDefine/board");
             }
         } else {
-            // Retorno a la página principal
+            // Retorno a la pï¿½gina principal
             header("Location: " . base_url());
         }
     }
@@ -369,22 +372,22 @@ class SystemUserDefine extends CI_Controller
     public function rememberPassword()
     {
         /**
-         * El propósito de esta funciòn es realizar el cambio de contraseña cuando el usuario lo ha olvidado
+         * El propï¿½sito de esta funciï¿½n es realizar el cambio de contraseï¿½a cuando el usuario lo ha olvidado
          */
         $email = $this->security->xss_clean($this->input->post('email'));
-        // Obtengo usuario con el correo electrónico ingresado
+        // Obtengo usuario con el correo electrï¿½nico ingresado
         $usuario = $this->FunctionsGeneral->getFieldFromTableNotId("ADM_USUARIO", "ID", "CORREO", $email);
         if ($usuario != '') {
-            // Si existe un correo electrónico
+            // Si existe un correo electrï¿½nico
             $this->session->set_userdata('temporal', cadenaAleatoria(1));
             $hash = password_hash($this->session->userdata('temporal'), PASSWORD_BCRYPT);
             $clave = $this->encryption->encrypt($hash);
             $this->FunctionsGeneral->updateByID("ADM_USUARIO", "CLAVE", $clave, $usuario, $usuario);
             $this->FunctionsGeneral->updateByID("ADM_USUARIO", "ESTADO", 'I', $usuario, $usuario);
-            // Envio mensaje de creaciòn de usuario
+            // Envio mensaje de creaciï¿½n de usuario
             $this->sendInformation($usuario, "sendInformationUser3");
         } else {
-            // Redirecciono la página
+            // Redirecciono la pï¿½gina
             $redirect = "Home/emailNotExist";
             redirect(base_url() . $redirect);
         }
@@ -393,26 +396,26 @@ class SystemUserDefine extends CI_Controller
     public function sendInformation($id, $type, $message = null, $validate = null)
     {
         /**
-         * Envio la información correspondiente a los correos respectivos
+         * Envio la informaciï¿½n correspondiente a los correos respectivos
          */
-        // Envio correo electrónico si esta activa la costante
+        // Envio correo electrï¿½nico si esta activa la costante
         if ($type == 'sendInformationUser') {
             $message = 'saveUser';
-            // Pagina a donde retornará la información
+            // Pagina a donde retornarï¿½ la informaciï¿½n
             $mainPage = "SystemUserDefine/board";
         } else if ($type == 'sendInformationUser2') {
             $message = 'passwordChange';
-            // Pagina a donde retornará la información
+            // Pagina a donde retornarï¿½ la informaciï¿½n
             $mainPage = "SystemUserDefine/board";
         } else if ($type == 'sendInformationUser3') {
             $message = 'passwordChange';
-            // Pagina a donde retornará la información
+            // Pagina a donde retornarï¿½ la informaciï¿½n
             $mainPage = "Home/passwordChange";
         }
         
         if ($validate != 2) {
             if (CTE_CORREO_ELECTRONICO) {
-                // 1. Envio información al correo respectivo
+                // 1. Envio informaciï¿½n al correo respectivo
                 if ($validate == null) {
                     $type = $type;
                     $redirect = "Mailer/sendEmail/" . $type . "/" . $id . "/2";
@@ -420,28 +423,28 @@ class SystemUserDefine extends CI_Controller
                 }
             }
         }
-        // Pinto mensaje para retornar a la aplicación
+        // Pinto mensaje para retornar a la aplicaciï¿½n
         $this->session->set_userdata('id', $id);
         $this->session->set_userdata('auxiliar', $message);
        //  echo $message;
-        // Redirecciono la página
+        // Redirecciono la pï¿½gina
         redirect(base_url() . $mainPage);
     }
 
     public function saveProfile()
     {
         /**
-         * Guardo la información de los cambios realizados del usuario
+         * Guardo la informaciï¿½n de los cambios realizados del usuario
          */
         $mainPage = "SystemUserDefine/board";
         if ($this->FunctionsAdmin->validateSession($mainPage)) {
             // Actualizo el valor
             $id = $this->session->userdata('usuario');
-            // Actualizo la informaciòn del usuario
-            $this->Users->updateUser($id, $this->security->xss_clean($this->input->post('nombre')), $this->security->xss_clean($this->input->post('apellido')), $this->security->xss_clean($this->input->post('correo')), null, $this->session->userdata('usuario'));
+            // Actualizo la informaciï¿½n del usuario
+            $this->Users->updateUser($id, $this->security->xss_clean($this->input->post('nombre')), $this->security->xss_clean($this->input->post('apellido')), $this->security->xss_clean($this->input->post('correo')),$this->security->xss_clean($this->input->post('telefono')), null, $this->session->userdata('usuario'));
             
             if ($this->security->xss_clean($this->input->post('valida')) == 1) {
-                // Se debe hacer el cambio de contraseña
+                // Se debe hacer el cambio de contraseï¿½a
                 $fila = $this->Users->getUsersCondition($id);
                 // Obtengo el hash
                 $fila->CLAVE = $this->encryption->decrypt($fila->CLAVE);
@@ -452,8 +455,8 @@ class SystemUserDefine extends CI_Controller
                 if (password_verify($clave, $fila->CLAVE)) {
                     $historico = $this->Users->getClaveUsuarioHistorico($id);
                     if (verificaHistorioClave($clave, $fila->CLAVE, $nuevaVerifica, $id, $this, 1)) {
-                        // No existe en el histórico
-                        // Actualizo la contraseña
+                        // No existe en el histï¿½rico
+                        // Actualizo la contraseï¿½a
                         $ciphertext = password_hash($nuevaVerifica, PASSWORD_BCRYPT);
                         // Cifro la nueva clave
                         $nueva = $this->encryption->encrypt($ciphertext);
@@ -462,10 +465,10 @@ class SystemUserDefine extends CI_Controller
                         $this->FunctionsGeneral->updateByID("ADM_USUARIO", "FCCON", cambiaHoraServer(2), $id, $id);
                         // Verifico cantidad en el historico
                         if (count($historico) == $this->FunctionsGeneral->getFieldFromTable("ADM_PARAMETROS", "HISTORICO", 1)) {
-                            // Debo eliminar el registro más viejo
+                            // Debo eliminar el registro mï¿½s viejo
                             $this->Users->deletePswHistory(SERVER_NUMBER);
                         }
-                        // Guardo el historico de la nueva contraseña
+                        // Guardo el historico de la nueva contraseï¿½a
                         $this->Users->insertUserHistoryPsw($id, $this->encryption->encrypt($nuevaVerifica));
                         // Se informa del cambio correcto
                         $mensaje = 'updatePsswUser';
@@ -476,7 +479,7 @@ class SystemUserDefine extends CI_Controller
                         $redirect = 'SystemUserDefine/profile';
                     }
                 } else {
-                    // Se informa que la contraseña anterior contiene errores
+                    // Se informa que la contraseï¿½a anterior contiene errores
                     $mensaje = 'errorPassword';
                     $redirect = 'SystemUserDefine/profile';
                 }
@@ -485,13 +488,13 @@ class SystemUserDefine extends CI_Controller
                 $mensaje = 'updateUser';
                 $redirect = $this->FunctionsGeneral->getFieldFromTable("ADM_USUARIO", "PAGINA", $id);
             }
-            // Pinto mensaje para retornar a la aplicación informando que no hay información para la consulta realizada
+            // Pinto mensaje para retornar a la aplicaciï¿½n informando que no hay informaciï¿½n para la consulta realizada
             $this->session->set_userdata('id', $id);
             $this->session->set_userdata('auxiliar', $mensaje);
-            // Redirecciono la página
+            // Redirecciono la pï¿½gina
             redirect(base_url() . $redirect);
         } else {
-            // Retorno a la página principal
+            // Retorno a la pï¿½gina principal
             header("Location: " . base_url());
         }
     }
