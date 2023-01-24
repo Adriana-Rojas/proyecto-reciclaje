@@ -285,7 +285,7 @@ $config['mailpath']         = '/usr/sbin/sendmail';
 $config['smtp_host']        = 'smtp.office365.com';
 $config['smtp_user']        = 'info.cicirec@cirec.org';
 $config['smtp_pass']        = '7D?tGrrWoCLY.';
-$config['smtp_port']        = 587;
+$config['smtp_port']        = 587; 
 $config['smtp_timeout']     = 30;                       // (in seconds)
 $config['smtp_crypto']      = 'tls';                       // '' or 'tls' or 'ssl'
 $config['smtp_debug']       = 0;                        // PHPMailer's SMTP debug info level: 0 = off, 1 = commands, 2 = commands and data, 3 = as 2 plus connection status, 4 = low level data output.
