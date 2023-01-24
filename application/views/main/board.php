@@ -349,10 +349,17 @@ defined('BASEPATH') or exit('No direct script access allowed');
 								</i>
 							</a>
 						</div>
-						<div id="phone" class="bg-white collapse-body collapse show" role="tabpanel" aria-labelledby="headingEight" style="">
+						<div id="workPhone" class="bg-white collapse-body collapse show" role="tabpanel" aria-labelledby="headingEight" style="">
 							<div class="card-body d-flex flex-column p-4">
-								<p class="font-weight-normal mb-4"> 3145316052</p>
-								<a class="action-button" href="tel:3145316052"> Llamar a Reciclador</a>
+								<p class="font-weight-normal mb-4"> <?PHP echo $telefonoreciclador; ?>
+									<a href="https://api.whatsapp.com/send/?phone=57<?PHP echo $telefonoreciclador ?>&text=Hola&type=phone_number&app_absent=0" target="_blank">
+										<img src="<?= base_url() ?>assets/images/logo-wasap.png" width="50" height="50">
+									</a>
+								</p>
+								<td>
+
+								</td>
+								<a class="action-button" href="tel:<?PHP echo $telefonoreciclador; ?>">Llamar Personal</a>
 							</div>
 						</div>
 					</li>
