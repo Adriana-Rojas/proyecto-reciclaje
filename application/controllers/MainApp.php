@@ -43,8 +43,9 @@ class MainApp extends CI_Controller
 				$data['telefono'] = $value->TELEFONO;
 			}
 			$data['telefonoreciclador']  =  $this->FunctionsGeneral->getFieldFromTableNotId("ADM_USUARIO", "TELEFONO", "ID", $this->session->userdata('usuario'));
+			$data['ruta']  =  $this->FunctionsGeneral->getFieldFromTableNotId("ADM_USUARIO", "RUTA", "ID", $this->session->userdata('usuario'));
+			$data['correo']  =  $this->FunctionsGeneral->getFieldFromTableNotId("ADM_USUARIO", "CORREO", "ID", $this->session->userdata('usuario'));
 
-			
 			//Verifico si se tiene definido estadisticas para el usuario
 			if ($this->FunctionsGeneral->getQuantityFieldFromTable("ORD_TIPOUSUARIOESTAD", "ID_USUARIO", $this->session->userdata('usuario')) > 0) {
 

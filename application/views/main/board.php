@@ -379,9 +379,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						</div>
 						<div id="website" class="bg-white collapse-body collapse show" role="tabpanel" aria-labelledby="headingEight" style="">
 							<div class="card-body d-flex flex-column p-4">
-								<a href="https://www.google.com/maps/d/edit?hl=es-419&amp;mid=1KG9s036NJj38yru9w06Muvuy3mx9Cb8&amp;ll=4.68123780007098%2C-74.10017604511188&amp;z=14" class="font-weight-normal mb-4 text-truncate">https://www.google.com/maps/d/edit?hl=es-419&amp;mid=1KG9s036NJj38yru9w06Muvuy3mx9Cb8&amp;ll=4.68123780007098%2C-74.10017604511188&amp;z=14</a>
-								<a class="action-button" href="https://www.google.com/maps/d/edit?hl=es-419&amp;mid=1KG9s036NJj38yru9w06Muvuy3mx9Cb8&amp;ll=4.68123780007098%2C-74.10017604511188&amp;z=14">Abrir Mapa</a>
-								<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1KG9s036NJj38yru9w06Muvuy3mx9Cb8&ehbc=2E312F" width="100%" height="480"></iframe>
+								<?PHP echo $ruta?>
 							</div>
 				</ul>
 				<ul id="accordion" role="tablist" aria-multiselectable="true" class="card-collapse p-0" style="list-style: none">
@@ -454,14 +452,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						</div>
 						<div id="email" class="bg-white collapse-body collapse show" role="tabpanel" aria-labelledby="email" style="">
 							<div class="card-body d-flex flex-column p-4">
-								<p class="font-weight-normal mb-4">rojasbeltranadrianapatricia@gmail.com</p>
-								<a class="action-button" href="mailto:rojasbeltranadrianapatricia@gmail.com">Mail to
+								<p class="font-weight-normal mb-4"><?PHP echo $correo; ?></p>
+								<a class="action-button" href="mailto:<?PHP echo $correo; ?>">Enviar Correo
 								</a>
 							</div>
 						</div>
 					</li>
 				</ul>
-				<a href="https://cdn.me-qr.com/vcf/vcards/339196.vcf" class="mb-5 mt-3 action-button download-btn">DOWNLOAD VCARD</a>
+				<a href="https://cdn.me-qr.com/vcf/vcards/339196.vcf" class="mb-5 mt-3 action-button download-btn">Descargar datos</a>
 			</div>
 		</div>
 	</div>
