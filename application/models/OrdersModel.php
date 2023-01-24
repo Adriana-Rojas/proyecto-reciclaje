@@ -42,6 +42,19 @@ class OrdersModel extends CI_Model
 		$this->db->insert('ORD_GRUELEM', $data);
 		return $consecutivo;
 	}
+	public function getParameters($id){
+        /** Obtiene los diferentes m�dulos que se tienen creados dentro de la aplicaci�n*/
+        
+        $sql="select *
+                from ADM_PARAMETROS
+                where ID='$id'";
+        $result=$this->db->query($sql);
+        if($result->num_rows()>0){
+            return $result->result();
+        }else{
+            return null;
+        }
+    }
 	public function insertBodyPartsSection($nombre, $tiempo, $miembros, $usuario)
 	{
 		/**

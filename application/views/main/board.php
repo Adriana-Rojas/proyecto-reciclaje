@@ -324,17 +324,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						</div>
 						<div id="workPhone" class="bg-white collapse-body collapse show" role="tabpanel" aria-labelledby="headingEight" style="">
 							<div class="card-body d-flex flex-column p-4">
-								<p class="font-weight-normal mb-4"> 3219779439</p>
-								<td>
-									<a href="https://api.whatsapp.com/send/?phone=57<?PHP echo $value->TELEFONO ?>&text=Hola&type=phone_number&app_absent=0" target="_blank">
+								<p class="font-weight-normal mb-4"> <?PHP echo $telefono; ?>
+									<a href="https://api.whatsapp.com/send/?phone=57<?PHP echo $telefono ?>&text=Hola&type=phone_number&app_absent=0" target="_blank">
 										<img src="<?= base_url() ?>assets/images/logo-wasap.png" width="50" height="50">
 									</a>
-									<?PHP
+								</p>
+								<td>
 
-									echo $value->TELEFONO;
-									?>
 								</td>
-								<a class="action-button" href="tel:3219779439">Llamar Empresa</a>
+								<a class="action-button" href="tel:<?PHP echo $telefono; ?>">Llamar Empresa</a>
 							</div>
 						</div>
 					</li>

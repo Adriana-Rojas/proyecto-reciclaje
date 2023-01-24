@@ -22,6 +22,7 @@ class MainApp extends CI_Controller {
 		/**
 		 * Panel principal para la gesti�n de ubicaciones
 		 */
+		
 		// Valido si la sessi�n existe en caso contrario saco al usuario
 		$mainPage = "MainApp/board";
 		if ($this->FunctionsAdmin->validateSession ( $this->encryption->encrypt ( CTE_SAVE_INFORMATION_PROGRAM ) )) {
@@ -33,7 +34,11 @@ class MainApp extends CI_Controller {
 			//Pinto estadisticas generales totales por proceso 
 			$data['procesos']=$this->OrdersModel->selectQuantityOrderByProcess();
 			
-			
+			$listParameters = $this->OrdersModel->getParameters(1);
+            foreach ($listParameters as $value) {               
+                $data['telefono'] = $value->TELEFONO;                
+            }
+            // Pinto pla
 			
 			//Verifico si se tiene definido estadisticas para el usuario
 			if ($this->FunctionsGeneral->getQuantityFieldFromTable("ORD_TIPOUSUARIOESTAD", "ID_USUARIO", $this->session->userdata('usuario')) > 0) {
