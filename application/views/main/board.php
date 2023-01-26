@@ -444,19 +444,51 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						</div>
 					</li>
 				</ul>
-				<body>
-					<img alt="Código QR" id="codigo">
-					<script>
-						new QRious({
-							element: document.querySelector("#codigo"),
-							value: "http://localhost:8080/proyecto/MainApp/board/<?= $usuarioqr ?>", // La URL , // La URL o el texto
-							size: 200,
-							backgroundAlpha: 0, // 0 para fondo transparente
-							foreground: "#0391d1", // Color del QR
-							level: "M", // Puede ser L,M,Q y H (L es el de menor nivel, H el mayor)
-						});
-					</script>
-				</body>
+				<ul id="accordion" role="tablist" aria-multiselectable="true" class="card-collapse p-0" style="list-style: none">
+					<li class="card-plain pt-3">
+						<div class="card-header header-collapse p-0" role="tab" id="headingEight">
+							<a class="" data-toggle="collapse" data-parent="#accordion" href="https://me-qr.com/entry/vcard/C3XVK5F#email" aria-expanded="true" aria-controls="email">
+								<span class="collapse-title font-weight-normal">
+									<i class="fa fa-envelope" aria-hidden="true"></i>
+									QR
+								</span>
+								<i class="material-icons">
+									<img style="float: right;" width="24" height="24">
+								</i>
+							</a>
+						</div>
+						<div id="qr" class="bg-white collapse-body collapse show" role="tabpanel" aria-labelledby="qr" style="">
+							<div class="card-body d-flex flex-column p-4">
+
+								<body>									
+									<img alt="Código QR" id="codigo">
+									<br>
+									<button type="button" class="btn btn-success"id="btnDescargar">Descargar</button>
+									<script>
+										const $imagen = document.querySelector("#codigo"),
+											$boton = document.querySelector("#btnDescargar");
+										new QRious({
+											element: $imagen,
+											value: "http://localhost:8080/proyecto/MainApp/board/<?= $usuarioqr ?>", // La URL , // La URL o el texto
+											size: 200,
+											backgroundAlpha: 0, // 0 para fondo transparente
+											foreground: "#0391d1", // Color del QR
+											level: "M", // Puede ser L,M,Q y H (L es el de menor nivel, H el mayor)
+										});
+										$boton.onclick = () => {
+											const enlace = document.createElement("a");
+											enlace.href = $imagen.src;
+											enlace.download = "Código QR <?= $usuarioqr ?>.png";
+											enlace.click();
+										}
+									</script>
+								</body>
+								</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+
 				<a href="https://cdn.me-qr.com/vcf/vcards/339196.vcf" class="mb-5 mt-3 action-button download-btn">Descargar datos</a>
 			</div>
 		</div>
