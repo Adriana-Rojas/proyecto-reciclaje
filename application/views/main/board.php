@@ -444,12 +444,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						</div>
 					</li>
 				</ul>
-				<?php
-				$enlace_actual = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-				echo $enlace_actual;
-
-				?>
-
 				<body>
 					<img alt="Código QR" id="codigo">
 					<script>

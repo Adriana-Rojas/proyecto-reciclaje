@@ -37,44 +37,48 @@ class MainAppc extends CI_Controller
 		showCommon($this->session->userdata('auxiliar'), $this, $mainPage, "myTable", null);
 		//Pinto estadisticas generales totales por proceso 
 		$data['procesos'] = $this->OrdersModel->selectQuantityOrderByProcess();
+		
+		$enlace_actual = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+		$reciclador = substr($enlace_actual, 47); 
+		//echo $reciclador;
 
 		$listParameters = $this->OrdersModel->getParameters(1);
 		foreach ($listParameters as $value) {
 			$data['telefono'] = $value->TELEFONO;
 		}
-		$data['telefonoreciclador']  =  $this->FunctionsGeneral->getFieldFromTableNotId("ADM_USUARIO", "TELEFONO", "ID", $this->session->userdata('usuario'));
-		$data['ruta']  =  $this->FunctionsGeneral->getFieldFromTableNotId("ADM_USUARIO", "RUTA", "ID", $this->session->userdata('usuario'));
-		$data['correo']  =  $this->FunctionsGeneral->getFieldFromTableNotId("ADM_USUARIO", "CORREO", "ID", $this->session->userdata('usuario'));
+		$data['telefonoreciclador']  =  $this->FunctionsGeneral->getFieldFromTableNotId("ADM_USUARIO", "TELEFONO", "ID", $reciclador);
+		$data['ruta']  =  $this->FunctionsGeneral->getFieldFromTableNotId("ADM_USUARIO", "RUTA", "ID", $reciclador);
+		$data['correo']  =  $this->FunctionsGeneral->getFieldFromTableNotId("ADM_USUARIO", "CORREO", "ID", $reciclador);
 
 		//Verifico si se tiene definido estadisticas para el usuario
-		if ($this->FunctionsGeneral->getQuantityFieldFromTable("ORD_TIPOUSUARIOESTAD", "ID_USUARIO", $this->session->userdata('usuario')) > 0) {
+		if ($this->FunctionsGeneral->getQuantityFieldFromTable("ORD_TIPOUSUARIOESTAD", "ID_USUARIO", $reciclador) > 0) {
 
 
 			//Defino que se presentar�n gr�ficas 
 			$data['graficas'] = true;
 			//Obtengo los valores de los tipos de ordenes que se presentar�n
-			$tipo1 = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_TIPOUSUARIOESTAD", "ID_TIPO1", "ID_USUARIO", $this->session->userdata('usuario'));
+		/*	$tipo1 = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_TIPOUSUARIOESTAD", "ID_TIPO1", "ID_USUARIO", $reciclador);
 			$tipo[1] = $tipo1;
 			$data['tipo1'] = $this->FunctionsGeneral->getFieldFromTable("ORD_TIPOORDEN", "PREFIJO", $tipo1);
-			$tipo2 = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_TIPOUSUARIOESTAD", "ID_TIPO2", "ID_USUARIO", $this->session->userdata('usuario'));
+			$tipo2 = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_TIPOUSUARIOESTAD", "ID_TIPO2", "ID_USUARIO", $reciclador);
 			$tipo[2] = $tipo2;
 			$data['tipo2'] = $this->FunctionsGeneral->getFieldFromTable("ORD_TIPOORDEN", "PREFIJO", $tipo2);
-			$tipo3 = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_TIPOUSUARIOESTAD", "ID_TIPO3", "ID_USUARIO", $this->session->userdata('usuario'));
+			$tipo3 = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_TIPOUSUARIOESTAD", "ID_TIPO3", "ID_USUARIO", $reciclador);
 			$tipo[3] = $tipo3;
 			$data['tipo3'] = $this->FunctionsGeneral->getFieldFromTable("ORD_TIPOORDEN", "PREFIJO", $tipo3);
-			$tipo4 = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_TIPOUSUARIOESTAD", "ID_TIPO4", "ID_USUARIO", $this->session->userdata('usuario'));
-			$tipo[4] = $tipo4;
-			$data['tipo4'] = $this->FunctionsGeneral->getFieldFromTable("ORD_TIPOORDEN", "PREFIJO", $tipo4);
-			$tipo5 = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_TIPOUSUARIOESTAD", "ID_TIPO5", "ID_USUARIO", $this->session->userdata('usuario'));
-			$tipo[5] = $tipo5;
-			$data['tipo5'] = $this->FunctionsGeneral->getFieldFromTable("ORD_TIPOORDEN", "PREFIJO", $tipo5);
+			$tipo4 = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_TIPOUSUARIOESTAD", "ID_TIPO4", "ID_USUARIO", $reciclador);
+			//$tipo[4] = $tipo4;
+			//$data['tipo4'] = $this->FunctionsGeneral->getFieldFromTable("ORD_TIPOORDEN", "PREFIJO", $tipo4);
+			//$tipo5 = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_TIPOUSUARIOESTAD", "ID_TIPO5", "ID_USUARIO", $reciclador);
+			//$tipo[5] = $tipo5;
+			//$data['tipo5'] = $this->FunctionsGeneral->getFieldFromTable("ORD_TIPOORDEN", "PREFIJO", $tipo5);
 			//Pinto informaci�n sobre el estado actual de los tipos de �rdenes
 			$data['valor1'] = $this->OrdersModel->selectQuantityOrderByTipo($tipo1);
 			$data['valor2'] = $this->OrdersModel->selectQuantityOrderByTipo($tipo2);
 			$data['valor3'] = $this->OrdersModel->selectQuantityOrderByTipo($tipo3);
 			$data['valor4'] = $this->OrdersModel->selectQuantityOrderByTipo($tipo4);
-			$data['valor5'] = $this->OrdersModel->selectQuantityOrderByTipo($tipo5);
-
+			//$data['valor5'] = $this->OrdersModel->selectQuantityOrderByTipo($tipo5);
+*/
 			//Pinto informaci�n sobre el hist�rico de los tipos de �rdenes
 			$mes = defineArrayMeses();
 			$mesActual = date('m');
@@ -138,8 +142,8 @@ class MainAppc extends CI_Controller
 		}
 
 
-		$data['ordenes'] = retornaOrdenesActualesParaNotificacion($this->session->userdata('usuario'));
-		$data['usuarioqr'] = $this->session->userdata('usuario');
+		$data['ordenes'] = retornaOrdenesActualesParaNotificacion($reciclador);
+		$data['usuarioqr'] = $reciclador;
 
 		//echo "<script>console.log('Console: " . $data['ordenes'] . "' );</script>";
 

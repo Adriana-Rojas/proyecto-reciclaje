@@ -58,7 +58,7 @@ if (!function_exists('showCommon')) {
         /**
          * Pinto datos del header de la p�gina Web
          */
-
+		error_reporting(0);
         // Pinto el head del HTML
         // $page->load->view('common/head');
         pintaMensaje($page, $mensaje, $dataTable, $dateValue);

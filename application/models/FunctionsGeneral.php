@@ -186,7 +186,7 @@ class FunctionsGeneral extends CI_Model
 
 	public function getFieldFromTableNotId($table, $campo, $campoBusqueda, $valor)
 	{
-		echo "<script>console.log('Console: " . $valor. "' );</script>";
+		//echo "<script>console.log('Console: " . $valor. "' );</script>";
 		/** Selecciono el valor actual para el campo $campo del registro con $campoBusqueda $valor*/
 		$this->db->select($campo);
 		$this->db->from($table);
