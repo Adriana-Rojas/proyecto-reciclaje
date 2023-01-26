@@ -35,6 +35,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 								<th width="40%">Nombres y Apellidos</th>
 								<th>Perfil</th>
 								<th>whatsapp</th>
+								<th>Descargar QR</th>
 								<th>Estado</th>
 								<th>Acci&oacute;n</th>
 							</tr>
@@ -62,10 +63,17 @@ defined('BASEPATH') or exit('No direct script access allowed');
 											echo $value->TELEFONO;
 											?>
 										</td>
+										<td>
+											<a href="http://localhost:8080/proyecto/MainApp/board/<?PHP echo $value->ID; ?>" target="_blank">
+												<img src="<?= base_url() ?>assets/images/logo-wasap.png" width="50" height="50">
+											</a>
+											
+										</td>
 										<td><span class="<?= validaEstadosGenerales($value->ESTADO, 'CLASE') ?>">
 												<?= validaEstadosGenerales($value->ESTADO, 'NOMBRE') ?>
 											</span> </td>
 										<td>
+											
 											<!--  
                                                     <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete"><i class="ti-close" aria-hidden="true"></i></button>
                                                     -->
