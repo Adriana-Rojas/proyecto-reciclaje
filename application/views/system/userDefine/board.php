@@ -64,16 +64,31 @@ defined('BASEPATH') or exit('No direct script access allowed');
 											?>
 										</td>
 										<td>
-											<a href="http://localhost:8080/proyecto/MainApp/board/<?PHP echo $value->ID; ?>" target="_blank">
-												<img src="<?= base_url() ?>assets/images/logo-wasap.png" width="50" height="50">
-											</a>
-											
+
+											<head>
+												<title>Testing QR code</title>
+												<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+												<script type="text/javascript">
+													function generateBarCode() {
+														var nric = $('#text').val();
+														var url = 'https://api.qrserver.com/v1/create-qr-code/?data=' + nric + '&amp;size=50x50';
+														$('#barcode').attr('src', url);
+													}
+												</script>
+											</head>
+
+											<body>
+												<img id='barcode' src="https://api.qrserver.com/v1/create-qr-code/?data=<?= $value->ID ?>&amp;size=100x100" alt=""  width="50" height="50" />
+											</body>
+
 										</td>
+
+										
 										<td><span class="<?= validaEstadosGenerales($value->ESTADO, 'CLASE') ?>">
 												<?= validaEstadosGenerales($value->ESTADO, 'NOMBRE') ?>
 											</span> </td>
 										<td>
-											
+
 											<!--  
                                                     <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete"><i class="ti-close" aria-hidden="true"></i></button>
                                                     -->
