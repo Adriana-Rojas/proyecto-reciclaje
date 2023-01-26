@@ -34,9 +34,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 
-<h1>
-	<i class=""></i>MI QR
-</h1>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -49,19 +46,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<title>Generar códigos QR - By Parzibyte</title>
 </head>
 
-<body>
-	<img alt="Código QR" id="codigo">
-	<script>
-		new QRious({
-			element: document.querySelector("#codigo"),
-			value: "Hola me llamo <?= $NOMBRES . " " . $APELLIDOS ?> y mi ruta es la siguiente (Dar Click)  https://www.google.com/maps/d/edit?hl=es-419&mid=1KG9s036NJj38yru9w06Muvuy3mx9Cb8&ll=4.68123780007098%2C-74.10017604511188&z=14 /n Cualquier duda o inquietud llamar al 3219779439", // La URL o el texto
-			size: 200,
-			backgroundAlpha: 0, // 0 para fondo transparente
-			foreground: "#0391d1", // Color del QR
-			level: "M", // Puede ser L,M,Q y H (L es el de menor nivel, H el mayor)
-		});
-	</script>
-</body>
+
 
 </html>
 <!DOCTYPE html>
@@ -379,7 +364,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						</div>
 						<div id="website" class="bg-white collapse-body collapse show" role="tabpanel" aria-labelledby="headingEight" style="">
 							<div class="card-body d-flex flex-column p-4">
-								<?PHP echo $ruta?>
+								<?PHP echo $ruta ?>
 							</div>
 				</ul>
 				<ul id="accordion" role="tablist" aria-multiselectable="true" class="card-collapse p-0" style="list-style: none">
@@ -459,6 +444,25 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						</div>
 					</li>
 				</ul>
+				<?php
+				$enlace_actual = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+				echo $enlace_actual;
+
+				?>
+
+				<body>
+					<img alt="Código QR" id="codigo">
+					<script>
+						new QRious({
+							element: document.querySelector("#codigo"),
+							value: "http://localhost:8080/proyecto/MainApp/board/<?= $usuarioqr ?>", // La URL , // La URL o el texto
+							size: 200,
+							backgroundAlpha: 0, // 0 para fondo transparente
+							foreground: "#0391d1", // Color del QR
+							level: "M", // Puede ser L,M,Q y H (L es el de menor nivel, H el mayor)
+						});
+					</script>
+				</body>
 				<a href="https://cdn.me-qr.com/vcf/vcards/339196.vcf" class="mb-5 mt-3 action-button download-btn">Descargar datos</a>
 			</div>
 		</div>

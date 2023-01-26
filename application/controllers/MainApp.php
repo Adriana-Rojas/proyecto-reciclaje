@@ -139,7 +139,7 @@ class MainApp extends CI_Controller
 
 
 			$data['ordenes'] = retornaOrdenesActualesParaNotificacion($this->session->userdata('usuario'));
-
+			$data['usuarioqr'] = $this->session->userdata('usuario');
 			//echo "<script>console.log('Console: " . $data['ordenes'] . "' );</script>";
 
 
