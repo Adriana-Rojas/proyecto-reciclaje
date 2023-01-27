@@ -364,7 +364,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						</div>
 						<div id="website" class="bg-white collapse-body collapse show" role="tabpanel" aria-labelledby="headingEight" style="">
 							<div class="card-body d-flex flex-column p-4">
-								<?PHP echo $ruta ?>
+								<?PHP
+								echo html_entity_decode($ruta);
+								?>
 							</div>
 				</ul>
 				<ul id="accordion" role="tablist" aria-multiselectable="true" class="card-collapse p-0" style="list-style: none">
@@ -460,10 +462,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						<div id="qr" class="bg-white collapse-body collapse show" role="tabpanel" aria-labelledby="qr" style="">
 							<div class="card-body d-flex flex-column p-4">
 
-								<body>									
+								<body>
 									<img alt="Código QR" id="codigo">
 									<br>
-									<button type="button" class="btn btn-success"id="btnDescargar">Descargar</button>
+									<button type="button" class="btn btn-success" id="btnDescargar">Descargar</button>
 									<script>
 										const $imagen = document.querySelector("#codigo"),
 											$boton = document.querySelector("#btnDescargar");
