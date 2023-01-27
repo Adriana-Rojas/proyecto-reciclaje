@@ -64,26 +64,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 											?>
 										</td>
 										<td>
-
-											<head>
-												<title>Testing QR code</title>
-												<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-												<script type="text/javascript">
-													function generateBarCode() {
-														var nric = $('#text').val();
-														var url = 'https://api.qrserver.com/v1/create-qr-code/?data=' + nric + '&amp;size=50x50';
-														$('#barcode').attr('src', url);
-													}
-												</script>
-											</head>
-
 											<body>
-												<img id='barcode' src="https://api.qrserver.com/v1/create-qr-code/?data=<?= $value->ID ?>&amp;size=100x100" alt=""  width="50" height="50" />
+												<a href="https://api.qrserver.com/v1/create-qr-code/?data=http://localhost:8080/proyecto/MainAppc/boardc/<?= $value->ID ?>&amp;size=250x250" alt="" width="100" height="100"  download="w3logo">
+													<button type="submit"><img id='barcode' src="https://api.qrserver.com/v1/create-qr-code/?data=http://localhost:8080/proyecto/MainAppc/boardc/<?= $value->ID ?>&amp;size=100x100" alt="" width="50" height="50" />Descargar</button>
+												</a>
 											</body>
 
 										</td>
 
-										
+
 										<td><span class="<?= validaEstadosGenerales($value->ESTADO, 'CLASE') ?>">
 												<?= validaEstadosGenerales($value->ESTADO, 'NOMBRE') ?>
 											</span> </td>
