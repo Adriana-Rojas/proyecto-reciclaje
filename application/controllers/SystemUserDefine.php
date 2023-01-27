@@ -249,7 +249,16 @@ class SystemUserDefine extends CI_Controller
                     $this->session->set_userdata('temporal', cadenaAleatoria(1));
                     $hash = password_hash($this->session->userdata('temporal'), PASSWORD_BCRYPT);
                     $clave = $this->encryption->encrypt($hash);
-                    $this->Users->insertUser($id, $this->security->xss_clean($this->input->post('nombre')), $this->security->xss_clean($this->input->post('apellido')), $this->security->xss_clean($this->input->post('correo')), $this->security->xss_clean($this->input->post('telefono')),$this->security->xss_clean($this->input->post('ruta')), $clave, $this->security->xss_clean($this->input->post('pagina')), $this->session->userdata('usuario'));
+                    $this->Users->insertUser(
+						$id, 
+					$this->security->xss_clean($this->input->post('nombre')), 
+					$this->security->xss_clean($this->input->post('apellido')), 
+					$this->security->xss_clean($this->input->post('correo')), 
+					$this->security->xss_clean($this->input->post('telefono')),
+					$this->security->xss_clean($this->input->post('ruta')), 
+					$clave, 
+					$this->security->xss_clean($this->input->post('pagina')), 
+					$this->session->userdata('usuario'));
                     
                     // Creo los permisos respectivos
                     $idRolPer = $this->FunctionsGeneral->getFieldFromTableNotIdFields("ADM_ROLPERFIL", "ID", "ID_ROL", 1, "ID_PERFIL", $this->security->xss_clean($this->input->post('perfil')));
