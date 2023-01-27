@@ -284,7 +284,7 @@ if ($listaDetalle!=null){
 					</div>
 					
 					<div class="form-group">
-						<label class="col-md-12" for="empresa">Entidad (EPS) * </label>
+						<label class="col-md-12" for="empresa">Entidad * </label>
 						<div class="col-md-12">
 							<select class="form-control" id="empresa" name="empresa" <?=$disabledEdit; ?>>
 								<option value="">--- Seleccione una opci&oacute;n ---</option>
@@ -298,7 +298,7 @@ if ($listaDetalle!=null){
 								        }
 								        $empresa= $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB","NOM_APB","ID_APB",$value->ID_EMPRESA);
                                         ?>
-                                <option value="<?= $value->ID;?>" <?= $selected; ?>><?= $empresa." - ".$value->TARIFA;?></option>
+                                <option value="<?= $value->ID;?>" <?= $selected; ?>><?= $empresa;?></option>
 								<?php
                                     }
                                 }
