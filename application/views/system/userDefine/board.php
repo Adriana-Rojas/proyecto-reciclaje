@@ -65,8 +65,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 										</td>
 										<td>
 											<body>
-												<a href="https://api.qrserver.com/v1/create-qr-code/?data=http://localhost:8080/proyecto/MainAppc/boardc/<?= $value->ID ?>&amp;size=250x250" alt="" width="100" height="100"  download="w3logo">
-													<button type="submit"><img id='barcode' src="https://api.qrserver.com/v1/create-qr-code/?data=http://localhost:8080/proyecto/MainAppc/boardc/<?= $value->ID ?>&amp;size=100x100" alt="" width="50" height="50" />Descargar</button>
+												<a href="https://api.qrserver.com/v1/create-qr-code/?data=http://localhost:8080/proyecto/MainAppc/boardc/<?= $value->ID ?>&amp;size=250x250&amp;color=0287c2" alt="" width="100" height="100"  download="w3logo">
+													<button type="submit"><img id='barcode' src="https://api.qrserver.com/v1/create-qr-code/?data=http://localhost:8080/proyecto/MainAppc/boardc/<?= $value->ID ?>&amp;size=100x100&amp;color=0287c2" alt="" width="50" height="50" />Descargar</button>
 												</a>
 											</body>
 
