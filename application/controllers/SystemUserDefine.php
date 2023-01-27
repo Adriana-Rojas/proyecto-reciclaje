@@ -99,6 +99,7 @@ class SystemUserDefine extends CI_Controller
             $data['apellido'] = null;
             $data['correo'] = null;
             $data['telefono'] = null;
+            $data['ruta'] = null;
             $data['pagina'] = DEFAULT_PAGE;
             $data['tipo'] = null;
             $data['readOnly'] = null;
@@ -145,7 +146,8 @@ class SystemUserDefine extends CI_Controller
                 $data['id'] = $id;
                 $data['readOnly'] = "readOnly='readOnly'";
                 $data['correo'] = $this->FunctionsGeneral->getFieldFromTable("ADM_USUARIO", "CORREO", $id);				
-                $data['telefono'] = $this->FunctionsGeneral->getFieldFromTable("ADM_USUARIO", "TELEFONO", $id);
+                $data['telefono'] = $this->FunctionsGeneral->getFieldFromTable("ADM_USUARIO", "TELEFONO", $id);		
+                $data['ruta'] = $this->FunctionsGeneral->getFieldFromTable("ADM_USUARIO", "RUTA", $id);
                 $data['pagina'] = $this->FunctionsGeneral->getFieldFromTable("ADM_USUARIO", "PAGINA", $id);
                 $data['nombre'] = $this->FunctionsGeneral->getFieldFromTable("ADM_USUARIO", "NOMBRES", $id);
                 $data['apellido'] = $this->FunctionsGeneral->getFieldFromTable("ADM_USUARIO", "APELLIDOS", $id);
@@ -198,6 +200,7 @@ class SystemUserDefine extends CI_Controller
                 $data['apellido'] = $this->FunctionsGeneral->getFieldFromTable("ADM_USUARIO", "APELLIDOS", $id);
                 $data['correo'] = $this->FunctionsGeneral->getFieldFromTable("ADM_USUARIO", "CORREO", $id);
                 $data['telefono'] = $this->FunctionsGeneral->getFieldFromTable("ADM_USUARIO", "TELEFONO", $id);
+                $data['ruta'] = $this->FunctionsGeneral->getFieldFromTable("ADM_USUARIO", "RUTA", $id);
                 // Cargo la lista de acciones
                 $data['listaSiNo'] = $this->FunctionsAdmin->selectValoresListaAdministracion('SI_NO', '1');
                 $data['valorSINO'] = null;
@@ -246,7 +249,7 @@ class SystemUserDefine extends CI_Controller
                     $this->session->set_userdata('temporal', cadenaAleatoria(1));
                     $hash = password_hash($this->session->userdata('temporal'), PASSWORD_BCRYPT);
                     $clave = $this->encryption->encrypt($hash);
-                    $this->Users->insertUser($id, $this->security->xss_clean($this->input->post('nombre')), $this->security->xss_clean($this->input->post('apellido')), $this->security->xss_clean($this->input->post('correo')), $this->security->xss_clean($this->input->post('telefono')), $clave, $this->security->xss_clean($this->input->post('pagina')), $this->session->userdata('usuario'));
+                    $this->Users->insertUser($id, $this->security->xss_clean($this->input->post('nombre')), $this->security->xss_clean($this->input->post('apellido')), $this->security->xss_clean($this->input->post('correo')), $this->security->xss_clean($this->input->post('telefono')),$this->security->xss_clean($this->input->post('ruta')), $clave, $this->security->xss_clean($this->input->post('pagina')), $this->session->userdata('usuario'));
                     
                     // Creo los permisos respectivos
                     $idRolPer = $this->FunctionsGeneral->getFieldFromTableNotIdFields("ADM_ROLPERFIL", "ID", "ID_ROL", 1, "ID_PERFIL", $this->security->xss_clean($this->input->post('perfil')));
@@ -267,7 +270,7 @@ class SystemUserDefine extends CI_Controller
             } else {
                 $id = $this->security->xss_clean($this->input->post('codigo'));
                 // Actualizo la informaci�n del usuario
-                $this->Users->updateUser($id, $this->security->xss_clean($this->input->post('nombre')), $this->security->xss_clean($this->input->post('apellido')), $this->security->xss_clean($this->input->post('correo')), $this->security->xss_clean($this->input->post('telefono')), $this->security->xss_clean($this->input->post('pagina')), $this->session->userdata('usuario'));
+                $this->Users->updateUser($id, $this->security->xss_clean($this->input->post('nombre')), $this->security->xss_clean($this->input->post('apellido')), $this->security->xss_clean($this->input->post('correo')), $this->security->xss_clean($this->input->post('telefono')),$this->security->xss_clean($this->input->post('ruta')), $this->security->xss_clean($this->input->post('pagina')), $this->session->userdata('usuario'));
                 // Actualizo el rol perfil
                 $idRolPer = $this->FunctionsGeneral->getFieldFromTableNotIdFields("ADM_ROLPERFIL", "ID", "ID_ROL", 1, "ID_PERFIL", $this->security->xss_clean($this->input->post('perfil')));
                 $this->Users->updateUsuRolPer($id, $idRolPer, $this->session->userdata('usuario'));
@@ -441,7 +444,7 @@ class SystemUserDefine extends CI_Controller
             // Actualizo el valor
             $id = $this->session->userdata('usuario');
             // Actualizo la informaci�n del usuario
-            $this->Users->updateUser($id, $this->security->xss_clean($this->input->post('nombre')), $this->security->xss_clean($this->input->post('apellido')), $this->security->xss_clean($this->input->post('correo')),$this->security->xss_clean($this->input->post('telefono')), null, $this->session->userdata('usuario'));
+            $this->Users->updateUser($id, $this->security->xss_clean($this->input->post('nombre')), $this->security->xss_clean($this->input->post('apellido')), $this->security->xss_clean($this->input->post('correo')),$this->security->xss_clean($this->input->post('telefono')),$this->security->xss_clean($this->input->post('ruta')), null, $this->session->userdata('usuario'));
             
             if ($this->security->xss_clean($this->input->post('valida')) == 1) {
                 // Se debe hacer el cambio de contrase�a
