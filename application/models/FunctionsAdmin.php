@@ -470,7 +470,7 @@ class FunctionsAdmin extends CI_Model
             ADM_PERFIL.ID = $perfil AND
             ADM_USUARIO.ESTADO = '".ACTIVO_ESTADO."'
     	";
-        // echo $sql."<br>";
+       //  echo $sql."<br>";
         // Cargo el resultado de la consulta dentro de un array de resultados
         $result = $this->db->query($sql);
         if ($result->num_rows() > 0) {

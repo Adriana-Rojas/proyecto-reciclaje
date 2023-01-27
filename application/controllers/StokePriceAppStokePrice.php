@@ -311,7 +311,7 @@ class StokePriceAppStokePrice extends CI_Controller
 
 
             //Listado de ejecutivos
-            $data['listaUsuarios'] = $this->FunctionsAdmin->selectUsersFromProfile(PROFILE_DEFAULT_STOKEPRICE);
+            $data['listaUsuarios'] = $this->FunctionsAdmin->selectUsersFromProfile(1);
 
             //Cantidad de registros
             $data['registros'] = 1;
